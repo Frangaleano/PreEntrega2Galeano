@@ -1,0 +1,1815 @@
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&family=Euphoria+Script&display=swap');
+
+/*aplique camelCase en todo el archivo, a todas las clases*/
+
+/*MOBILE FIRST 0 a 500px */
+
+
+* {
+    margin: 0em;
+    padding: 0em;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-family: 'Comfortaa', cursive;
+    text-align: center;
+}
+
+
+/*Declaro los nombres de las areas para la grilla*/
+
+/*Esto va a permanecer en todos los archivos y vistas*/
+
+
+header {
+    grid-area: headerHome;
+}
+
+main {
+    grid-area: mainHome;
+}
+
+footer {
+    grid-area: footerHome;
+}
+
+.gridHome {
+    text-align: center;
+    font-family: 'Comfortaa', cursive;
+    gap: 1px;
+    display: grid;
+    grid-template-areas:
+        "headerHome"
+        "mainHome"
+        "footerHome";
+    grid-template-rows: 4% 91% 5%;
+    min-height: 100vh;
+}
+
+/*ESTILOS HOME MOBILE COMENCE EN 316PX*/
+
+.flexHdHome {
+    background-color: #ec407a;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.bgnavHome {
+    background-color: #ec407a;
+    padding: 0px;
+
+}
+
+.nav-link {
+    color: black;
+    background-color: white;
+    font-size: 14px;
+    font-family: black 'Comfortaa', cursive;
+}
+
+.container-fluid {
+    padding: 5px;
+    flex-direction: row;
+}
+
+
+main {
+    background: linear-gradient(#ec407a, #ff9999);
+    padding: 5px;
+
+}
+
+footer {
+    background-color: #ff9999;
+}
+
+
+.botonesHome {
+    color: white;
+    font-family: 'Comfortaa', cursive;
+    font-size: 15px;
+
+}
+
+.anclaImgHome {
+    border: none;
+}
+
+.logoHome {
+    max-width: 200px;
+}
+
+
+.navbar {
+    width: 100%;
+}
+
+.navbar-light .navbar-nav .nav-link {
+    color: black;
+}
+
+a {
+    text-decoration: none;
+    font-family: 'Comfortaa', cursive;
+}
+
+
+.flexTitulo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.tituloHome {
+    color: black;
+    text-align: center;
+    font-size: 60px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    font-family: 'Euphoria Script', cursive;
+}
+
+.salon {
+    font-size: 30px;
+}
+
+p {
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+.imgHome {
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-items: center;
+
+}
+
+.imgHomeHov {
+    width: 25em;
+    height: 25em;
+    padding: 10px;
+    border-radius: 50px;
+
+}
+
+.flexSecHome {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    margin-bottom: 40px;
+
+
+}
+
+.hdosHome {
+    color: black;
+    text-align: center;
+    font-size: 50px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-family: 'Euphoria Script', cursive;
+}
+
+.somosHome {
+    margin-bottom: 40px;
+}
+
+
+
+.ftHome {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    padding-top: 10px;
+
+}
+
+.seguinosHome {
+    font-size: 20px;
+}
+
+
+.flexBotonesHm {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.volver {
+    margin: 0px;
+    width: 54px;
+    height: 40px;
+}
+
+
+
+/*PRIMER BREAKPOINT DE 524PX*/
+
+@media (min-width:524px) {
+
+    .flexHdHome {
+        border-bottom: 2px solid white;
+
+
+    }
+
+    .navbar-nav .nav-link {
+        padding-right: 5px;
+        padding-left: 5px;
+    }
+
+    .navbar {
+        flex-wrap: unset;
+        width: 100%;
+    }
+
+    button {
+        display: none;
+    }
+
+    .navbar-nav {
+        display: flex;
+        flex-direction: row;
+        padding-left: 20px;
+        margin-bottom: 0;
+        list-style: none;
+        width: 100%;
+        justify-content: flex-end;
+    }
+
+    .navbar-brand {
+        margin: 0px;
+    }
+
+    .nav-link {
+        color: black;
+        background-color: #ff9999;
+        border: 2px solid white;
+        border-radius: 20px;
+        font-size: 15px;
+        margin-left: 5px;
+    }
+
+    .collapse.navbar-collapse {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .logoHome {
+        max-width: 200px;
+    }
+
+    .tituloHome {
+        font-size: 110px;
+        margin-top: 50px;
+    }
+
+    .salon {
+        font-size: 40px;
+    }
+
+    .imgHome {
+        display: grid;
+        grid-template-columns: 50% 50%;
+        justify-items: center;
+    }
+
+    .hdosHome {
+        margin-top: 30px;
+        margin-bottom: 20px;
+        font-size: 90px;
+    }
+
+    .gridHome {
+        display: grid;
+        grid-template-areas:
+            "headerHome"
+            "mainHome"
+            "footerHome";
+        grid-template-rows: 5% 87% 8%;
+
+    }
+
+    .flexSecHome {
+        margin: 20px;
+    }
+
+    .somosHome {
+        font-size: 25px;
+        margin-bottom: 10px;
+    }
+
+    .seguinosHome {
+        font-size: 25px;
+    }
+
+
+    .volver {
+        margin-top: 10px;
+    }
+
+    .flexBotonesHm {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+
+}
+
+
+
+/*SEGUNDO BRACKPOINT DE 868*/
+
+@media (min-width: 868px) {
+
+
+    .flexHdHome {
+        border-bottom: 2px solid white;
+    }
+
+    .gridHome {
+        display: grid;
+        grid-template-areas:
+            "headerHome"
+            "mainHome"
+            "footerHome";
+        grid-template-rows: 5% 89% 8%;
+
+    }
+
+    .nav-link {
+        font-size: 23px;
+    }
+
+    .flexHdHome {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    .logoHome {
+        margin-top: 5px;
+        max-width: 300px;
+    }
+
+    li {
+        display: inline-block
+    }
+
+    .botonesHome {
+        color: black;
+        background-color: #ff9999;
+        border: solid white;
+        border-radius: 30px;
+        font-size: 22px;
+        padding: 7px;
+        margin-top: 10px;
+        margin-left: 10px;
+    }
+
+    .tituloHome {
+        margin-top: 30px;
+        padding: 20px;
+        font-size: 160px;
+    }
+
+    .salon {
+        font-size: 50px;
+        margin-bottom: 30px;
+    }
+
+
+
+    .imgHome {
+        display: grid;
+        grid-template-columns: 33% 33% 33%;
+        gap: 5px;
+    }
+
+    .imgHomeHov {
+        width: 30em;
+        height: 30em;
+
+    }
+
+    .hdosHome {
+        font-size: 140px;
+        margin-bottom: 40px;
+    }
+
+    .somosHome {
+        font-size: 35px;
+        margin-bottom: 30px;
+    }
+
+    .flexBotonesHm {
+        justify-content: space-evenly;
+
+    }
+
+    .botonServ:hover {
+        background-color: #B6D5F0;
+    }
+
+    .botonIns:hover {
+        background-color: #ABEBC6;
+    }
+
+    .botonGal:hover {
+        background-color: #D2B4DE;
+    }
+
+    .botonCon:hover {
+        background-color: #ffb74d;
+    }
+
+    .imgHomeHov:hover {
+        transform: scale(1.02);
+    }
+
+    .icono:hover {
+        opacity: 50%;
+
+    }
+
+}
+
+/*TERCER BREAKPOINT DE 1096 VISTA DESKTOP*/
+
+@media (min-width: 1096px) {
+
+    .nav-link {
+        font-size: 25px;
+    }
+
+
+
+    .flexHdHome {
+        justify-content: space-between;
+        border-bottom: 3px solid white;
+
+    }
+
+    .container-fluid {
+        margin-right: 50px;
+        margin-left: 50px;
+    }
+
+    .gridHome {
+        display: grid;
+        grid-template-areas:
+            "headerHome"
+            "mainHome"
+            "footerHome";
+        grid-template-rows: 5% 88.7% 6.3%;
+    }
+
+    .logoHome {
+        max-width: 400px;
+    }
+
+    .botonesHome {
+        font-size: 29px;
+
+    }
+
+    .tituloHome {
+        font-size: 240px;
+    }
+
+
+    .salon {
+        font-size: 60px;
+        padding-bottom: 50px;
+    }
+
+    .imgHomeHov {
+        width: 40em;
+        height: 40em;
+    }
+
+
+    .flexSecHome {
+        padding-right: 20px;
+        padding-bottom: 100px;
+        padding-left: 20px;
+    }
+
+    .hdosHome {
+        padding-top: 40px;
+        padding-bottom: 10px;
+        font-size: 150px;
+
+    }
+
+    .ftHome {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        border-top: 2px solid white;
+    }
+
+    .anclasFtHome {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-around;
+    }
+
+    .somosHome {
+        font-size: 35px;
+    }
+
+    .seguinosHome {
+        font-family: 'Comfortaa', cursive;
+        font-size: 30px;
+    }
+
+    .iconoHome {
+        width: 48px;
+    }
+
+
+
+    .botonServ:hover {
+        background-color: #B6D5F0;
+    }
+
+    .botonIns:hover {
+        background-color: #ABEBC6;
+    }
+
+    .botonGal:hover {
+        background-color: #D2B4DE;
+    }
+
+    .botonCon:hover {
+        background-color: #ffb74d;
+    }
+
+    .imgHomeHov:hover {
+        transform: scale(1.02);
+    }
+
+    .icono:hover {
+        opacity: 50%;
+
+    }
+
+
+
+
+}
+
+
+
+/*ESTILO SERVICIO DESKTOP*/
+
+.gridSer {
+    text-align: center;
+    display: grid;
+    grid-template-areas:
+        "headerHome"
+        "mainHome"
+        "footerHome";
+    grid-template-rows: 4.5% 93% 5.1%;
+    min-height: 100vh;
+}
+
+.headerSer {
+    background-color: #2196f3;
+    border-bottom: 4px solid white;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+.anclaHdSer {
+    max-width: 400px;
+}
+
+.imagenHdSer {
+    margin-top: 9px;
+    margin-left: 0px;
+    max-width: 400px;
+}
+
+
+.ulNavSer {
+    padding-top: 2px;
+    background-color: #2196f3;
+}
+
+.botonesSer {
+    color: black;
+    background-color: #B6D5F0;
+    border: solid white;
+    border-radius: 30px;
+    font-size: 29px;
+    padding: 7px;
+    margin-top: 5px;
+    margin-left: 5px;
+}
+
+
+.botonSerSer:hover {
+    background-color: #2196f3;
+}
+
+.botonInsSer:hover {
+    background-color: #ABEBC6;
+}
+
+.botonGalSer:hover {
+    background-color: #D2B4DE;
+}
+
+.botonConSer:hover {
+    background-color: #ffb74d;
+}
+
+.mainSer {
+    background: linear-gradient(#2196f3, #B6D5F0);
+}
+
+
+.flexTitutloSer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.tituloSer {
+    color: black;
+    text-align: center;
+    font-size: 220px;
+    font-family: 'Euphoria Script', cursive;
+    padding-top: 40px;
+    padding-bottom: 20px;
+}
+
+.subtituloSer {
+    font-family: 'Comfortaa', cursive;
+    font-size: 35px;
+    padding-bottom: 40px;
+
+}
+
+.gridImgSer {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    column-gap: 20px;
+    row-gap: 40px;
+    justify-items: center;
+}
+
+.fotosSer {
+    border-radius: 40px;
+    width: 50em;
+    height: 40em;
+}
+
+.fotosSer:hover {
+    transform: scale(1.02);
+}
+
+.flexParrafosSer {
+    margin-top: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.parrafosSer {
+    font-family: 'Comfortaa', cursive;
+    font-size: 30px;
+    padding-bottom: 60px;
+    margin-bottom: 0px;
+}
+
+.flexConSecSer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.hdosSer {
+    color: black;
+    text-align: center;
+    font-size: 100px;
+    font-family: 'Euphoria Script', cursive;
+    padding-top: 40px;
+    padding-bottom: 50px;
+}
+
+.contSer {
+    font-family: 'Comfortaa', cursive;
+    font-size: 30px;
+    padding-top: 0px;
+    padding-bottom: 40px;
+}
+
+.botonContactoSer {
+    color: black;
+    border: 1px solid white;
+    border-radius: 30px;
+    background-color: #B6D5F0;
+    font-size: 25px;
+    padding-top: 2px;
+    padding-left: 6px;
+    margin-right: 4px;
+}
+
+.ftSer {
+    padding-top: 8px;
+    padding-bottom: 2px;
+    background-color: #B6D5F0;
+    border-top: 3px solid white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.flexSeguinos {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.seguinosSer {
+    font-family: 'Comfortaa', cursive;
+    font-size: 30px;
+}
+
+
+.botonesFtSer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: baseline;
+}
+
+.iconoSer:hover {
+    opacity: 50%;
+
+}
+
+
+
+.volver {
+    width: 54px;
+    height: 40px;
+}
+
+
+/*ACA COMIENZA EL ESTILO DE LA SECCION INSTALACIONES*/
+
+.gridIns {
+    text-align: center;
+    display: grid;
+    grid-template-areas:
+        "headerHome"
+        "mainHome"
+        "footerHome";
+    grid-template-rows: 4.8% 91% 5.2%;
+}
+
+.headerIns {
+    background-color: #2ECC71;
+    border-bottom: 3px solid white;
+    padding: 10px 20px;
+}
+
+.navIns {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.ulNavIns {
+    margin-right: 20px;
+}
+
+.botonesIns {
+    color: black;
+    font-size: 29px;
+    background-color: #ABEBC6;
+    border: 3px solid white;
+    border-radius: 30px;
+    padding: 7px;
+    margin-right: 8px;
+}
+
+.mainIns {
+    background: linear-gradient(#2ECC71, #ABEBC6);
+    padding: 20px;
+}
+
+.botonSerIns:hover {
+    background-color: #B6D5F0;
+}
+
+.botonInsIns:hover {
+    background-color: #2ECC71;
+}
+
+.botonGalIns:hover {
+    background-color: #D2B4DE;
+}
+
+.botonConIns:hover {
+    background-color: #ffb74d;
+}
+
+.flexTitutloIns {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.tituloIns {
+    color: black;
+    text-align: center;
+    font-size: 180px;
+    font-family: 'Euphoria Script', cursive;
+    padding-top: 40px
+}
+
+.subtituloIns {
+    font-family: 'Comfortaa', cursive;
+    font-size: 30px;
+    text-align: center;
+
+}
+
+.gridImgIns {
+    display: grid;
+    grid-template-columns: 33% 33% 33%;
+    grid-template-rows: 50% 50%;
+    justify-items: center;
+    row-gap: 40px;
+    margin-top: 40px;
+
+
+}
+
+.imagenesIns {
+    width: 40em;
+    height: 40em;
+    border-radius: 30px;
+
+}
+
+.imagenesIns:hover {
+    transform: scale(1.02);
+}
+
+.flexTextoIns {
+    margin-top: 100px;
+    display: flex;
+    flex-direction: column;
+}
+
+.textoFotosIns {
+    font-family: 'Comfortaa', cursive;
+    font-size: 30px;
+    padding-bottom: 40px;
+}
+
+.articuloReglas {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.reglasIns {
+    color: black;
+    font-size: 130px;
+    font-family: 'Euphoria Script', cursive;
+    margin-bottom: 10px;
+}
+
+.textoReglas {
+    margin: 50px;
+    color: black;
+    font-size: 24px;
+    font-family: 'Comfortaa', cursive;
+    padding: 20px;
+
+}
+
+.ulReglas {
+    display: flex;
+    flex-direction: column;
+    color: black;
+    font-size: 40px;
+    font-family: 'Comfortaa', cursive;
+    padding-bottom: 60px;
+}
+
+.ftIns {
+    border-top: 3px solid white;
+    background-color: #ABEBC6;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    padding-top: 8px;
+}
+
+.seguinosIns {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.flexBotonesIns {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.volverIns {
+    margin-top: 8px;
+    width: 54px;
+    height: 40px;
+}
+
+.iconosIns {
+    height: 48px;
+
+}
+
+.iconosIns:hover {
+    opacity: 50%;
+
+}
+
+
+
+
+
+
+
+/*ACA COMIENZA EL ESTILO DE LA SECCION GALERIA*/
+
+
+
+.gridGal {
+    text-align: center;
+    display: grid;
+    grid-template-areas:
+        "headerHome"
+        "mainHome"
+        "footerHome";
+    grid-template-rows: 8% 84% 8%;
+}
+
+.headerGal {
+    background-color: #A569BD;
+    border-bottom: 4px solid white;
+    padding: 10px 20px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.botonesGal {
+    color: black;
+    font-size: 29px;
+    background-color: #D2B4DE;
+    border: 3px solid white;
+    border-radius: 30px;
+    padding: 7px;
+    margin-right: 8px;
+}
+
+.botonSerGal:hover {
+    background-color: #B6D5F0;
+}
+
+.botonInsGal:hover {
+    background-color: #82E0AA;
+}
+
+.botonGalGal:hover {
+    background-color: #A569BD;
+}
+
+.botonConGal:hover {
+    background-color: #ffb74d;
+}
+
+.mainGal {
+    background: linear-gradient(#A569BD, #D2B4DE);
+    padding: 20px;
+}
+
+.flexTituloGal {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.tituloGal {
+    color: black;
+    text-align: center;
+    font-size: 180px;
+    font-family: 'Euphoria Script', cursive;
+    padding-top: 40px;
+    margin-bottom: 20px;
+}
+
+.subtituloGal {
+    font-family: 'Comfortaa', cursive;
+    font-size: 30px;
+    text-align: center;
+
+}
+
+.gridImgGal {
+    display: grid;
+    grid-template-columns: 33% 33% 33%;
+    grid-template-rows: 50% 50%;
+    justify-items: center;
+    row-gap: 20px;
+    margin-top: 40px;
+}
+
+.imgGal {
+    width: 30em;
+    height: 30em;
+    border-radius: 30px;
+
+}
+
+.imgGal:hover {
+    transform: scale(1.02);
+}
+
+
+
+.flexHdosGal {
+    margin-top: 100px;
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 50px;
+}
+
+.politica {
+    color: black;
+    font-size: 130px;
+    font-family: 'Euphoria Script', cursive;
+    margin-bottom: 10px;
+}
+
+.parrafoSecGal {
+    margin: 50px;
+    color: black;
+    font-size: 24px;
+    font-family: 'Comfortaa', cursive;
+    padding: 20px;
+}
+
+.flexFtGal {
+    border-top: 3px solid white;
+    background-color: #D2B4DE;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    padding-top: 7px;
+    padding-bottom: 1px;
+
+}
+
+.flexBotonesFtGal {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.seguinosGal {
+    font-family: 'Comfortaa', cursive;
+    font-size: 30px;
+}
+
+
+.volverGal {
+    margin-top: 9px;
+    width: 54px;
+    height: 40px;
+}
+
+.iconosGal {
+    height: 48px;
+
+}
+
+.iconosGal:hover {
+    opacity: 50%;
+
+}
+
+
+
+/* Aca comienza el estilo de la seccion Contacto,
+VISTA MOBILE - MOBILE FIRST */
+/* ESTILOS HOME MOBILE COMENCE EN 316PX */
+
+.gridCon {
+    display: grid;
+    grid-template-areas:
+        "headerHome"
+        "mainHome"
+        "footerHome";
+    grid-template-rows: 7.5% 84.3% 9.4%;
+    grid-template-columns: 100%;
+    min-height: 100vh;
+    font-family: black 'Comfortaa', cursive;
+    gap: 1px;
+
+
+}
+
+.flexHdCon {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: #F39C12;
+
+
+}
+
+.navbarCon {
+    background-color: #F39C12;
+    width: 100%;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px;
+}
+
+
+
+.container-fluidCon {
+    display: flex;
+    flex-wrap: inherit;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+
+}
+
+
+.imgHdCon {
+    max-width: 199.5px;
+}
+
+.navbar-brandCon {
+    padding-top: 0.3125rem;
+    padding-bottom: 0.3122rem;
+}
+
+.navbar-navCon {
+    display: flex;
+    flex-direction: column;
+    padding-left: 0;
+    margin-bottom: 0;
+    list-style: none;
+}
+
+
+.navbar-collapseCon {
+    width: 100%;
+}
+
+.nav-linkCon {
+    color: black;
+    text-align: center;
+    background-color: white;
+    font-size: 14.1px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    margin-bottom: 0px;
+}
+
+
+.anclaHomeCon {
+    border: none;
+}
+
+.mainCon {
+    background: linear-gradient(#F39C12, #ffb74d);
+    padding: 20px;
+    padding-top: 10px;
+}
+
+
+.flexTituloCon {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+
+.tituloCon {
+    color: black;
+    text-align: center;
+    font-size: 70px;
+    margin-top: 0px;
+    margin-bottom: 20px;
+    font-family: 'Euphoria Script', cursive;
+}
+
+.subtituloCon {
+    font-size: 20px;
+    font-family: black 'Comfortaa', cursive;
+}
+
+.marcoForm {
+    border: 2px black solid;
+    border-radius: 20px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.formCon {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #ffb74d;
+    border-radius: 20px;
+    padding: 10px;
+}
+
+.flexFormulario {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+
+.palabraForm {
+    color: black;
+    font-family: 'Comfortaa', cursive;
+    font-size: 22px;
+    margin: 0px 20px;
+
+}
+
+
+.nombreInputs {
+    color: black;
+    font-family: 'Comfortaa', cursive;
+    font-size: 22px;
+    margin: 10px 30px;
+}
+
+.inputsForm {
+    width: 15em;
+    padding: 5px;
+    border-radius: 20px;
+    border: 2px solid white;
+    background-color: #ffb74d;
+    margin-bottom: 5px;
+    text-align: center;
+    font-size: 15px;
+}
+
+.flexInputCon {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    padding-bottom: 10px;
+    margin-left: 5px;
+}
+
+.inputCon {
+    padding: 5px;
+    border: 2px solid white;
+    border-radius: 20px;
+    background-color: #F39C12;
+    margin-top: 10px;
+    font-family: 'Comfortaa', cursive;
+    font-size: 22px;
+    margin-right: 5px;
+}
+
+.princesCon {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
+}
+
+.princesosCon {
+    border-radius: 20px;
+    width: 15em;
+    height: 15em;
+    margin: 60px 10px;
+}
+
+.ftCon {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    padding-top: 11px;
+    background-color: #ffb74d;
+
+}
+
+.seguinosCon {
+    font-size: 20px;
+}
+
+.flexBotonesCon {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.volverCon {
+    margin: 0px;
+    width: 54px;
+    height: 40px;
+}
+
+.iconoCon {
+    margin-top: 1px;
+    height: 48px;
+}
+
+
+/*
+/*Primer BreakPoint de 524, seccion contacto*/
+
+@media (min-width: 524px) {
+
+    .gridCon {
+        display: grid;
+        grid-template-areas:
+            "headerHome"
+            "mainHome"
+            "footerHome";
+        grid-template-rows: 5.5% 87.1% 8.7%;
+    }
+
+    .flexHdCon {
+        padding: 30px 0px;
+        border-bottom: 1.5px solid white;
+    }
+
+    .navbarCon {
+        flex-wrap: unset;
+        width: 100%;
+    }
+
+    .navbar-brandCon {
+        margin: 0px;
+    }
+
+    .collapseCon {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .navbar-navCon {
+        display: flex;
+        flex-direction: row;
+        padding-left: 16px;
+        padding-right: 2px;
+        margin-bottom: 0;
+        list-style: none;
+        width: 100%;
+        justify-content: flex-end
+    }
+
+    .nav-linkCon {
+        color: black;
+        padding-top: 4.5px;
+        padding-bottom: 3.5px;
+        padding-right: 4.5px;
+        padding-left: 4.5px;
+        background-color: #ffb74d;
+        border: 2px solid white;
+        border-radius: 20px;
+        font-size: 13px;
+        margin-left: 4px;
+    }
+
+    .navbar-collapseCon {
+        flex-basis: 100%;
+        flex-grow: 1;
+        align-items: center;
+    }
+
+    .imgHdCon {
+        max-width: 174px;
+    }
+
+    .tituloCon {
+        font-size: 130px;
+    }
+
+    .subtituloCon {
+        font-size: 25px;
+    }
+
+    .marcoForm {
+        margin: 0px 50px;
+    }
+
+    .inputsForm {
+        margin: 0px 30px;
+    }
+
+    .ftCon {
+        justify-content: space-evenly;
+        padding-top: 8px
+    }
+
+    .flexBotonesCon {
+        justify-content: space-evenly;
+        padding-bottom: 3px;
+        padding-left: 4px;
+    }
+
+    .seguinosCon {
+        margin-top: 6px;
+        font-size: 21.6px;
+    }
+
+    .volverCon {
+        margin-top: 10px;
+        margin: 0px;
+        width: 40.5px;
+        height: 36px;
+    }
+
+    .iconoCon {
+        height: 42px;
+    }
+
+    /*Segundo BreakPoint de 720, seccion contacto*/
+
+    @media (min-width: 720px) {
+
+        .gridCon {
+            display: grid;
+            grid-template-areas:
+                "headerHome"
+                "mainHome"
+                "footerHome";
+            grid-template-rows: 5.1% 92% 8.3%;
+        }
+
+        .nav-linkCon {
+            list-style: none;
+            color: black;
+            font-size: 15px;
+            margin-left: 5px;
+        }
+
+        .flexHdCon {
+            border-bottom: 2px solid white;
+        }
+
+
+        .imgHdCon {
+            max-width: 200px;
+        }
+
+        .tituloCon {
+            margin-top: 10px;
+            padding: 0px;
+            font-size: 150px;
+        }
+
+        .palabraForm {
+            color: black;
+            font-family: 'Comfortaa', cursive;
+            font-size: 25px;
+            margin: 0px 40px;
+
+
+        }
+
+        .princesosCon {
+            border-radius: 20px;
+            width: 30em;
+            height: 30em;
+            margin: 60px 10px;
+        }
+
+        .inputCon {
+            margin-top: 30px;
+        }
+
+        .ftCon {
+            padding-top: 10px;
+        }
+
+        .seguinosCon {
+            font-size: 25px;
+            padding-bottom: 0px;
+        }
+
+        .flexBotonesCon {
+            padding-bottom: 3px;
+            margin-right: 18px;
+            align-items: center;
+        }
+
+
+        .iconoCon {
+            height: 48px;
+        }
+
+        .volverCon {
+            padding-right: 4px;
+            padding-top: 7.5px;
+            width: 64px;
+            height: 50px;
+        }
+
+        /*TERCER BRACKPOINT DE 868*/
+
+        @media (min-width: 868px) {
+
+            .gridCon {
+                display: grid;
+                grid-template-areas:
+                    "headerHome"
+                    "mainHome"
+                    "footerHome";
+                grid-template-rows: 5.2% 90% 8.4%;
+            }
+
+            .botonesHdCon {
+                color: black;
+                background-color: #ffb74d;
+                border: solid white;
+                border-radius: 20px;
+                font-size: 18px;
+                padding: 7px;
+                margin-top: 10px;
+                margin-left: 10px;
+            }
+
+            .flexHdCon {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-around;
+            }
+
+            .nav-linkCon {
+
+
+                list-style: none;
+                color: black;
+                font-size: 21.8px;
+                padding-top: 5.5px;
+                padding-bottom: 4.5px;
+                padding-right: 4.5px;
+                padding-left: 4.5px;
+            }
+
+            .imgHdCon {
+                margin-top: 5px;
+                max-width: 281px;
+            }
+
+            .botonSerCon:hover {
+                background-color: #B6D5F0;
+            }
+
+            .botonInsCon:hover {
+                background-color: #82E0AA;
+            }
+
+            .botonGalCon:hover {
+                background-color: #D2B4DE;
+            }
+
+            .botonConCon:hover {
+                background-color: #F39C12;
+            }
+
+            .tituloCon {
+                padding: 0px 10px;
+                font-size: 200px;
+            }
+
+            .flexFormulario {
+                margin: 0px 40px;
+            }
+
+            .marcoForm {
+                padding: 40px 40px;
+            }
+
+            .palabraForm {
+                color: black;
+                font-family: 'Comfortaa', cursive;
+                font-size: 25px;
+                margin: 0px 40px;
+
+
+            }
+
+
+            .subtituloCon {
+                margin-bottom: 50px;
+            }
+
+            .princesosCon {
+                width: 30em;
+                height: 30em;
+                margin-bottom: 40px;
+            }
+
+            .seguinosCon {
+                font-size: 23.5px;
+            }
+
+
+            .flexBotonesCon {
+                padding: 0px;
+                margin-left: 6.5px;
+            }
+
+
+
+            .iconoCon {
+                height: 45px;
+            }
+
+            .volverCon {
+                padding-right: 4px;
+                padding-top: 7.5px;
+                width: 51px;
+                height: 45px;
+            }
+
+            @media (min-width: 1096px) {
+
+                .flexHdCon {
+                    justify-content: space-between;
+                }
+
+                .gridCon {
+                    display: grid;
+                    grid-template-areas:
+                        "headerHome"
+                        "mainHome"
+                        "footerHome";
+                    grid-template-rows: 4.9% 89% 6.2%;
+                }
+
+                .flexHdCon {
+                    border-bottom: 3.5px solid white;
+                }
+
+                .imgHdCon {
+                    max-width: 400px;
+                }
+
+                .nav-linkCon {
+                    
+                    list-style: none;
+                    color: black;
+                    font-size: 25px;
+                    border-radius: 18px;
+                }
+
+
+                .botonesHdCon {
+                    font-size: 29px;
+
+                }
+
+                .botonSerCon:hover {
+                    background-color: #B6D5F0;
+                }
+
+                .botonInsCon:hover {
+                    background-color: #82E0AA;
+                }
+
+                .botonGalCon:hover {
+                    background-color: #D2B4DE;
+                }
+
+                .botonConCon:hover {
+                    background-color: #F39C12;
+                }
+
+                .container-fluidCon {
+                    padding-right: 50px;
+                    padding-left: 50px;
+                }
+
+
+                .tituloCon {
+                    font-size: 240px;
+                }
+
+
+                .subtituloCon {
+                    font-size: 35px;
+                }
+
+                .marcoForm {
+                    margin: 10px 200px;
+                    padding: 80px 200px;
+                }
+
+
+                .palabraForm {
+                    color: black;
+                    font-family: 'Comfortaa', cursive;
+                    font-size: 30px;
+                    margin: 0px 40px;
+
+
+                }
+
+                .nombreInputs {
+                    font-size: 40px;
+                }
+
+                .inputsForm {
+                    height: 30px;
+                    font-size: 25px;
+                    color: black;
+                    font-family: 'Comfortaa', cursive;
+                    text-align: center;
+                }
+
+                .princesosCon {
+                    margin-top: 15em;
+                    margin-bottom: 18em;
+                    width: 45em;
+                    height: 45em;
+                }
+
+                .ftCon {
+                    border-top: 2px solid white;
+                    padding-top: 8px;
+                    padding-bottom: 5px;
+                }
+
+                .seguinosCon {
+                    font-size: 30px;
+                }
+
+                .volverCon {
+                    width: 55px;
+                    height: 40px;
+                    padding: 0px;
+                    margin: 0px;
+                    margin-top: 3px;
+                }
+
+                .volverCon:hover {
+                    opacity: 60%;
+                }
+
+                .flexBotonesCon {
+                    margin-right: 0px;
+                }
+
+                .iconoCon:hover {
+                    opacity: 50%;
+
+                }
+
+                .iconoCon {
+                    height: 48px;
+                }
