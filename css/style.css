@@ -1,0 +1,1938 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&family=Euphoria+Script&display=swap");
+* {
+  margin: 0em;
+  padding: 0em;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Comfortaa", cursive;
+  text-align: center;
+}
+
+/*ESTILOS HOME MOBILE FIRST COMENCE EN 316PX*/
+.gridHome {
+  text-align: center;
+  font-family: "Comfortaa", cursive;
+  display: grid;
+  grid-template-areas: "headerHome" "mainHome" "footerHome";
+  grid-template-rows: 4% 91% 5%;
+  min-height: 100vh;
+}
+.gridHome header, .gridHome .gridSer .headerSer, .gridSer .gridHome .headerSer {
+  grid-area: headerHome;
+  background-color: #ec407a;
+  border-bottom: 1px solid white;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.gridHome header nav, .gridHome .gridSer .headerSer nav, .gridSer .gridHome .headerSer nav {
+  background-color: #ec407a;
+  padding: 0px;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.gridHome header nav .container-fluid, .gridHome .gridSer .headerSer nav .container-fluid, .gridSer .gridHome .headerSer nav .container-fluid {
+  padding: 5px;
+  display: flex;
+  flex-direction: row;
+}
+.gridHome header nav .container-fluid .logoHome, .gridHome .gridSer .headerSer nav .container-fluid .logoHome, .gridSer .gridHome .headerSer nav .container-fluid .logoHome {
+  max-width: 200px;
+}
+.gridHome header nav .container-fluid div a, .gridHome .gridSer .headerSer nav .container-fluid div a, .gridSer .gridHome .headerSer nav .container-fluid div a {
+  color: black;
+  background-color: white;
+  font-size: 14px;
+  font-family: black "Comfortaa", cursive;
+  text-decoration: none;
+}
+.gridHome main {
+  grid-area: mainHome;
+  background: linear-gradient(#ec407a, #ff9999);
+  padding: 5px;
+}
+.gridHome main .flexTitulo, .gridHome main .gridSer .mainSer .flexTituloSer, .gridSer .mainSer .gridHome main .flexTituloSer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.gridHome main .flexTitulo h1, .gridHome main .gridSer .mainSer .flexTituloSer h1, .gridSer .mainSer .gridHome main .flexTituloSer h1 {
+  color: black;
+  font-size: 57px;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  font-family: "Euphoria Script", cursive;
+}
+.gridHome main .flexTitulo p, .gridHome main .gridSer .mainSer .flexTituloSer p, .gridSer .mainSer .gridHome main .flexTituloSer p {
+  color: black;
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+.gridHome main .imgHome {
+  display: grid;
+  grid-template-columns: 1fr;
+  justify-items: center;
+}
+.gridHome main .imgHome img {
+  width: 25em;
+  height: 25em;
+  padding: 10px;
+  border-radius: 50px;
+}
+.gridHome main article section {
+  padding: 10px;
+  margin-bottom: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.gridHome main article section h2 {
+  color: black;
+  text-align: center;
+  font-size: 50px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  font-family: "Euphoria Script", cursive;
+}
+.gridHome main article section p {
+  font-size: 17px;
+  margin-bottom: 40px;
+}
+.gridHome footer {
+  grid-area: footerHome;
+  padding-top: 10px;
+  background-color: #ff9999;
+  border-top: 1px solid white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+.gridHome footer p {
+  font-size: 20px;
+}
+.gridHome footer div {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+.gridHome footer div .volver {
+  margin: 0px;
+  width: 54px;
+  height: 40px;
+}
+
+/*PRIMER BREAKPOINT DE 524PX*/
+@media (min-width: 524px) {
+  .gridHome {
+    display: grid;
+    grid-template-areas: "headerHome" "mainHome" "footerHome";
+    grid-template-rows: 5% 87% 8%;
+  }
+  .gridHome header, .gridHome .gridSer .headerSer, .gridSer .gridHome .headerSer {
+    border-bottom: 1px solid white;
+  }
+  .gridHome header nav, .gridHome .gridSer .headerSer nav, .gridSer .gridHome .headerSer nav {
+    flex-wrap: unset;
+    width: 100%;
+  }
+  .gridHome header nav .navbar-brand, .gridHome .gridSer .headerSer nav .navbar-brand, .gridSer .gridHome .headerSer nav .navbar-brand {
+    margin: 0px;
+  }
+  .gridHome header nav .navbar-brand .logoHome, .gridHome .gridSer .headerSer nav .navbar-brand .logoHome, .gridSer .gridHome .headerSer nav .navbar-brand .logoHome {
+    max-width: 200px;
+  }
+  .gridHome header nav button, .gridHome .gridSer .headerSer nav button, .gridSer .gridHome .headerSer nav button {
+    display: none;
+  }
+  .gridHome header nav .collapse.navbar-collapse, .gridHome .gridSer .headerSer nav .collapse.navbar-collapse, .gridSer .gridHome .headerSer nav .collapse.navbar-collapse {
+    display: flex;
+    flex-direction: row;
+  }
+  .gridHome header nav .collapse.navbar-collapse .navbar-nav, .gridHome .gridSer .headerSer nav .collapse.navbar-collapse .navbar-nav, .gridSer .gridHome .headerSer nav .collapse.navbar-collapse .navbar-nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    padding-left: 20px;
+    margin-bottom: 0;
+    list-style: none;
+    width: 100%;
+  }
+  .gridHome header nav .collapse.navbar-collapse .navbar-nav .nav-link, .gridHome .gridSer .headerSer nav .collapse.navbar-collapse .navbar-nav .nav-link, .gridSer .gridHome .headerSer nav .collapse.navbar-collapse .navbar-nav .nav-link {
+    padding-right: 5px;
+    padding-left: 5px;
+    color: black;
+    background-color: #ff9999;
+    border: 2px solid white;
+    border-radius: 20px;
+    font-size: 15px;
+    margin-left: 5px;
+  }
+  .gridHome main .flexTitulo h1, .gridHome main .gridSer .mainSer .flexTituloSer h1, .gridSer .mainSer .gridHome main .flexTituloSer h1 {
+    font-size: 110px;
+    margin-top: 50px;
+  }
+  .gridHome main .flexTitulo p, .gridHome main .gridSer .mainSer .flexTituloSer p, .gridSer .mainSer .gridHome main .flexTituloSer p {
+    font-size: 40px;
+  }
+  .gridHome main .imgHome {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    justify-items: center;
+  }
+  .gridHome main .flexSecHome h2 {
+    margin-top: 30px;
+    margin-bottom: 20px;
+    font-size: 90px;
+  }
+  .gridHome main .flexSecHome p {
+    font-size: 25px;
+    margin-bottom: 10px;
+  }
+  .gridHome main footer p {
+    font-size: 25px;
+  }
+  .gridHome main footer div {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+}
+/*SEGUNDO BRACKPOINT DE 868*/
+@media (min-width: 868px) {
+  .gridHome {
+    display: grid;
+    grid-template-areas: "headerHome" "mainHome" "footerHome";
+    grid-template-rows: 5.1% 89% 8%;
+  }
+  .gridHome header, .gridHome .gridSer .headerSer, .gridSer .gridHome .headerSer {
+    border-bottom: 2.4px solid white;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+  .gridHome header nav .navbar-brand .logoHome, .gridHome .gridSer .headerSer nav .navbar-brand .logoHome, .gridSer .gridHome .headerSer nav .navbar-brand .logoHome {
+    margin-top: 5px;
+    max-width: 300px;
+  }
+  .gridHome header nav .collapse.navbar-collapse .navbar-nav .nav-link, .gridHome .gridSer .headerSer nav .collapse.navbar-collapse .navbar-nav .nav-link, .gridSer .gridHome .headerSer nav .collapse.navbar-collapse .navbar-nav .nav-link {
+    padding-right: 5px;
+    padding-left: 5px;
+    color: black;
+    background-color: #ff9999;
+    border: 2px solid white;
+    border-radius: 30px;
+    font-size: 23px;
+    margin-left: 5px;
+  }
+  .gridHome main .flexTitulo h1, .gridHome main .gridSer .mainSer .flexTituloSer h1, .gridSer .mainSer .gridHome main .flexTituloSer h1 {
+    margin-top: 30px;
+    padding: 20px;
+    font-size: 160px;
+  }
+  .gridHome main .flexTitulo p, .gridHome main .gridSer .mainSer .flexTituloSer p, .gridSer .mainSer .gridHome main .flexTituloSer p {
+    font-size: 50px;
+    margin-bottom: 30px;
+  }
+  .gridHome main .imgHome {
+    display: grid;
+    grid-template-columns: 33% 33% 33%;
+    gap: 5px;
+  }
+  .gridHome main .imgHome img {
+    width: 30em;
+    height: 30em;
+  }
+  .gridHome main h2 {
+    font-size: 140px;
+    margin-bottom: 40px;
+  }
+  .gridHome main .somosHome {
+    font-size: 35px;
+    margin-bottom: 30px;
+  }
+  .gridHome .flexBotonesHm {
+    justify-content: space-evenly;
+  }
+}
+/*TERCER BREAKPOINT DE 1096 VISTA DESKTOP*/
+@media (min-width: 1096px) {
+  .gridHome {
+    display: grid;
+    grid-template-areas: "headerHome" "mainHome" "footerHome";
+    grid-template-rows: 5% 88.7% 6.3%;
+  }
+  .gridHome header, .gridHome .gridSer .headerSer, .gridSer .gridHome .headerSer {
+    justify-content: space-between;
+    border-bottom: 2px solid white;
+  }
+  .gridHome header nav .container-fluid, .gridHome .gridSer .headerSer nav .container-fluid, .gridSer .gridHome .headerSer nav .container-fluid {
+    margin-right: 50px;
+    margin-left: 50px;
+  }
+  .gridHome header nav .container-fluid .navbar-brand .logoHome, .gridHome .gridSer .headerSer nav .container-fluid .navbar-brand .logoHome, .gridSer .gridHome .headerSer nav .container-fluid .navbar-brand .logoHome {
+    max-width: 400px;
+  }
+  .gridHome header nav .container-fluid .collapse.navbar-collapse .navbar-nav .nav-link, .gridHome .gridSer .headerSer nav .container-fluid .collapse.navbar-collapse .navbar-nav .nav-link, .gridSer .gridHome .headerSer nav .container-fluid .collapse.navbar-collapse .navbar-nav .nav-link {
+    font-size: 29px;
+  }
+  .gridHome header nav .container-fluid .collapse.navbar-collapse .navbar-nav .nav-link:hover, .gridHome .gridSer .headerSer nav .container-fluid .collapse.navbar-collapse .navbar-nav .nav-link:hover, .gridSer .gridHome .headerSer nav .container-fluid .collapse.navbar-collapse .navbar-nav .nav-link:hover {
+    background-color: #ec407a;
+  }
+  .gridHome main .flexTitulo h1, .gridHome main .gridSer .mainSer .flexTituloSer h1, .gridSer .mainSer .gridHome main .flexTituloSer h1 {
+    font-size: 240px;
+  }
+  .gridHome main .flexTitulo p, .gridHome main .gridSer .mainSer .flexTituloSer p, .gridSer .mainSer .gridHome main .flexTituloSer p {
+    font-size: 60px;
+    padding-bottom: 50px;
+  }
+  .gridHome main .imgHome img {
+    width: 40em;
+    height: 40em;
+  }
+  .gridHome main .imgHome img:hover {
+    transform: scale(1.02);
+  }
+  .gridHome main .flexSecHome {
+    padding-right: 20px;
+    padding-bottom: 100px;
+    padding-left: 20px;
+  }
+  .gridHome main .flexSecHome h2 {
+    padding-top: 40px;
+    padding-bottom: 10px;
+    font-size: 150px;
+  }
+  .gridHome main .flexSecHome p {
+    font-size: 35px;
+  }
+  .gridHome footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    border-top: 2px solid white;
+  }
+  .gridHome footer p {
+    font-family: "Comfortaa", cursive;
+    font-size: 30px;
+  }
+  .gridHome footer .iconoHome {
+    width: 48px;
+  }
+  .gridHome footer .iconoHome:hover {
+    opacity: 50%;
+  }
+}
+/*MOBILES FIRST 316PX*/
+.gridSer {
+  display: grid;
+  grid-template-areas: "headerSer" "mainSer" "footerSer";
+  grid-template-rows: 3.2% 95.8% 3.9%;
+  grid-template-columns: 100%;
+}
+.gridSer .headerSer {
+  grid-area: headerSer;
+  background-color: #2196f3;
+  padding: 0px;
+  border-bottom: 1.8px solid white;
+}
+.gridSer .headerSer nav {
+  background-color: #2196f3;
+  padding: 0px;
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  width: 100%;
+  height: 100%;
+}
+.gridSer .headerSer nav .container-fluid {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  background-color: #2196f3;
+  padding: 0px 3px;
+  width: 100%;
+  height: 100%;
+}
+.gridSer .headerSer nav .container-fluid .navbar-brand {
+  margin-right: 72px;
+  padding-top: 0px;
+  padding-bottom: 0px;
+}
+.gridSer .headerSer nav .container-fluid .logoSer {
+  width: 199.5px;
+}
+.gridSer .headerSer nav .container-fluid button {
+  display: flex;
+  margin-right: 2px;
+}
+.gridSer .headerSer nav .container-fluid .navbar-nav {
+  padding-left: 3px;
+  padding-right: 3px;
+}
+.gridSer .headerSer nav .container-fluid .navbar-nav .nav-link {
+  color: black;
+  background-color: white;
+  font-size: 14px;
+  font-family: black "Comfortaa", cursive;
+  text-decoration: none;
+  padding: 0.5rem 0rem;
+}
+.gridSer .mainSer {
+  grid-area: mainSer;
+  background: linear-gradient(#2196f3, #B6D5F0);
+}
+.gridSer .mainSer .flexTituloSer h1 {
+  color: black;
+  text-align: center;
+  font-size: 70px;
+  font-family: "Euphoria Script", cursive;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+.gridSer .mainSer .flexTituloSer p {
+  color: black;
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+.gridSer .mainSer .gridImgSer {
+  display: grid;
+  grid-template-columns: 1fr;
+  justify-items: center;
+  row-gap: 2em;
+}
+.gridSer .mainSer .gridImgSer img {
+  width: 25em;
+  height: 25em;
+  padding: 10px;
+  border-radius: 50px;
+}
+.gridSer .mainSer .flexParrafosSer {
+  margin-top: 40px;
+  padding: 0px 20px;
+}
+.gridSer .mainSer .flexParrafosSer p {
+  font-size: 17px;
+  margin-top: 25px;
+}
+.gridSer .mainSer .flexConSecSer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0px 20px;
+}
+.gridSer .mainSer .flexConSecSer h2 {
+  color: black;
+  text-align: center;
+  font-size: 40px;
+  font-family: "Euphoria Script", cursive;
+  padding-top: 30px;
+  padding-bottom: 20px;
+}
+.gridSer .mainSer .flexConSecSer p {
+  font-family: "Comfortaa", cursive;
+  font-size: 20px;
+  padding: 0px;
+  margin: 0px;
+}
+.gridSer .mainSer .flexConSecSer p .botonContactoSer {
+  color: black;
+  border: 1px solid white;
+  border-radius: 30px;
+  background-color: #B6D5F0;
+  font-size: 20px;
+  padding-top: 2px;
+  padding-left: 3px;
+  margin-right: 2px;
+  text-decoration: none;
+}
+.gridSer .ftSer {
+  grid-area: footerSer;
+  background-color: #B6D5F0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  padding-top: 9px;
+  border-top: 1px solid white;
+}
+.gridSer .ftSer .flexSeguinos {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.gridSer .ftSer .flexSeguinos p {
+  font-size: 20px;
+}
+.gridSer .ftSer div {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: baseline;
+}
+.gridSer .ftSer div .volver {
+  margin: 0px;
+  width: 54px;
+  height: 40px;
+}
+
+@media (min-width: 524px) {
+  .gridSer {
+    display: grid;
+    grid-template-areas: "headerSer" "mainSer" "footerSer";
+    grid-template-rows: 3.9% 94% 6.2%;
+    grid-template-columns: 100%;
+  }
+  .gridSer .headerSer {
+    border-bottom: 1px solid white;
+  }
+  .gridSer .headerSer nav {
+    flex-wrap: unset;
+    width: 100%;
+  }
+  .gridSer .headerSer nav .container-fluid {
+    padding: 0px 2px;
+    flex-wrap: nowrap;
+  }
+  .gridSer .headerSer nav .container-fluid .navbar-brand {
+    margin: 0px;
+  }
+  .gridSer .headerSer nav .container-fluid .navbar-brand .logoSer {
+    max-width: 172px;
+  }
+  .gridSer .headerSer nav .container-fluid button {
+    display: none;
+  }
+  .gridSer .headerSer nav .container-fluid .collapse.navbar-collapse {
+    display: flex;
+    flex-direction: row;
+  }
+  .gridSer .headerSer nav .container-fluid .collapse.navbar-collapse .navbar-nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    margin-bottom: 0;
+    list-style: none;
+    width: 100%;
+  }
+  .gridSer .headerSer nav .container-fluid .collapse.navbar-collapse .navbar-nav .nav-link {
+    padding: 3px 4px;
+    padding-bottom: 4.3px;
+    color: black;
+    background-color: #B6D5F0;
+    border: 2px solid white;
+    border-radius: 20px;
+    font-size: 13px;
+    margin-left: 4px;
+  }
+  .gridSer .mainSer .flexTituloSer h1 {
+    font-size: 120px;
+    margin-top: 20px;
+  }
+  .gridSer .mainSer .flexTituloSer p {
+    font-size: 30px;
+    padding: 8px 15px;
+  }
+  .gridSer .mainSer .gridImgSer {
+    row-gap: 0px;
+  }
+  .gridSer .mainSer article p {
+    padding-bottom: 50px;
+  }
+  .gridSer .ftSer .flexSeguinos {
+    padding-left: 0px;
+  }
+  .gridSer .ftSer .flexSeguinos p {
+    font-size: 17.3px;
+    padding-right: 2px;
+  }
+  .gridSer .ftSer div {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    padding-left: 10px;
+  }
+  .gridSer .ftSer div .iconoSer .volver {
+    max-width: 35px;
+  }
+  .gridSer .ftSer div .iconoSer img {
+    max-width: 41px;
+  }
+}
+@media (min-width: 868px) {
+  .gridSer {
+    display: grid;
+    grid-template-areas: "headerSer" "mainSer" "footerSer";
+    grid-template-rows: 4.4% 94% 6.9%;
+  }
+  .gridSer .headerSer {
+    border-bottom: 2px solid white;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+  .gridSer .headerSer nav .container-fluid {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+  .gridSer .headerSer nav .container-fluid .navbar-brand .logoSer {
+    margin-top: 5px;
+    width: 282px;
+    max-width: 282px;
+  }
+  .gridSer .headerSer nav .container-fluid .collapse.navbar-collapse {
+    width: 100%;
+    height: 100%;
+  }
+  .gridSer .headerSer nav .container-fluid .collapse.navbar-collapse .navbar-nav {
+    width: 100%;
+  }
+  .gridSer .headerSer nav .container-fluid .collapse.navbar-collapse .navbar-nav .nav-link {
+    padding-right: 5px;
+    padding-left: 5px;
+    color: black;
+    background-color: #B6D5F0;
+    border: 2px solid white;
+    border-radius: 30px;
+    font-size: 21.5px;
+    margin-left: 5px;
+    padding-top: 4px;
+    padding-bottom: 5px;
+  }
+  .gridSer .mainSer .flexTituloSer .tituloSer {
+    margin-top: 20px;
+    padding: 10px;
+    font-size: 160px;
+  }
+  .gridSer .mainSer .flexTituloSer p {
+    font-size: 40px;
+    margin-bottom: 30px;
+  }
+  .gridSer .mainSer .gridImgSer {
+    padding: 20px;
+    display: grid;
+    grid-template-columns: 33% 33% 33%;
+    -moz-column-gap: 5px;
+         column-gap: 5px;
+    row-gap: 5px;
+  }
+  .gridSer .mainSer .gridImgSer img {
+    width: 28em;
+    height: 28em;
+  }
+  .gridSer .mainSer .flexParrafosSer p {
+    font-size: 20px;
+  }
+  .gridSer .mainSer .flexConSecSer h2 {
+    font-size: 60px;
+    padding: 50px 0px;
+  }
+  .gridSer .ftSer .flexSeguinos p {
+    font-size: 19px;
+  }
+  .gridSer .ftSer .botonesFtSer {
+    justify-content: space-evenly;
+    padding-left: 4px;
+  }
+  .gridSer .ftSer .botonesFtSer .iconoSer img {
+    max-width: 45px;
+  }
+}
+@media (min-width: 1096px) {
+  .gridSer {
+    display: grid;
+    grid-template-areas: "headerSer" "mainSer" "footerSer";
+    grid-template-rows: 5.1% 95% 6.4%;
+    grid-template-columns: 100%;
+  }
+  .gridSer .headerSer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    border-bottom: 3px solid white;
+  }
+  .gridSer .headerSer nav .container-fluid {
+    margin-right: 50px;
+    margin-left: 50px;
+  }
+  .gridSer .headerSer nav .container-fluid .navbar-brand .logoSer {
+    width: 322px;
+    max-width: 322px;
+  }
+  .gridSer .headerSer nav .container-fluid .collapse.navbar-collapse .navbar-nav .nav-link {
+    font-size: 29.5px;
+    padding: 4px;
+  }
+  .gridSer .headerSer nav .container-fluid .collapse.navbar-collapse .navbar-nav .nav-link:hover {
+    background-color: #2196f3;
+  }
+  .gridSer .mainSer .flexTituloSer h1 {
+    font-size: 260px;
+  }
+  .gridSer .mainSer .gridImgSer {
+    padding: 0px;
+  }
+  .gridSer .mainSer .gridImgSer img {
+    border-radius: 60px;
+    padding: 30px;
+    width: 40em;
+    height: 40em;
+  }
+  .gridSer .mainSer .gridImgSer img:hover {
+    transform: scale(1.02);
+  }
+  .gridSer .mainSer .flexParrafosSer p {
+    padding: 10px;
+    font-size: 25px;
+  }
+  .gridSer .mainSer .flexConSecSer h2 {
+    padding-top: 50px;
+    padding-bottom: 50px;
+    font-size: 100px;
+  }
+  .gridSer .mainSer .flexConSecSer p {
+    font-size: 25px;
+  }
+  .gridSer .mainSer .flexConSecSer p .botonContactoSer:hover {
+    opacity: 50%;
+  }
+  .gridSer .ftSer {
+    border-top: 2px solid white;
+  }
+  .gridSer .ftSer .flexSeguinos p {
+    font-size: 30px;
+  }
+  .gridSer .ftSer .botonesFtSer img {
+    width: 49px;
+  }
+  .gridSer .ftSer .botonesFtSer img:hover {
+    opacity: 50%;
+  }
+}
+/*ESTILOS INSTALACIONES MOBILE FIRST COMENCE EN 316PX*/
+.gridIns {
+  text-align: center;
+  font-family: "Comfortaa", cursive;
+  display: grid;
+  grid-template-areas: "headerHome" "mainHome" "footerHome";
+  grid-template-rows: 3.3% 95% 4.1%;
+  min-height: 100vh;
+}
+.gridIns header, .gridIns .gridSer .headerSer, .gridSer .gridIns .headerSer {
+  grid-area: headerHome;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  background-color: #2ECC71;
+  border-bottom: 1px solid white;
+  padding-left: 2px;
+  padding-right: 2px;
+}
+.gridIns header nav, .gridIns .gridSer .headerSer nav, .gridSer .gridIns .headerSer nav {
+  background-color: #2ECC71;
+  padding: 0px;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.gridIns header nav .container-fluid, .gridIns .gridSer .headerSer nav .container-fluid, .gridSer .gridIns .headerSer nav .container-fluid {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding-right: 0px;
+  padding-left: 0px;
+}
+.gridIns header nav .container-fluid .navbar-brand, .gridIns .gridSer .headerSer nav .container-fluid .navbar-brand, .gridSer .gridIns .headerSer nav .container-fluid .navbar-brand {
+  padding: 0px;
+}
+.gridIns header nav .container-fluid .navbar-brand img, .gridIns .gridSer .headerSer nav .container-fluid .navbar-brand img, .gridSer .gridIns .headerSer nav .container-fluid .navbar-brand img {
+  width: 200px;
+}
+.gridIns header nav .container-fluid button, .gridIns .gridSer .headerSer nav .container-fluid button, .gridSer .gridIns .headerSer nav .container-fluid button {
+  width: 3em;
+  height: 2.1em;
+  padding: 2px;
+  margin-right: 2px;
+  border-radius: 5px;
+}
+.gridIns header nav .container-fluid button .navbar-toggler-icon, .gridIns .gridSer .headerSer nav .container-fluid button .navbar-toggler-icon, .gridSer .gridIns .headerSer nav .container-fluid button .navbar-toggler-icon {
+  display: inline-block;
+  width: 1.6em;
+  height: 1.7em;
+}
+.gridIns header nav .container-fluid .navbar-nav, .gridIns .gridSer .headerSer nav .container-fluid .navbar-nav, .gridSer .gridIns .headerSer nav .container-fluid .navbar-nav {
+  margin-top: 5px;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+.gridIns header nav .container-fluid .navbar-nav a, .gridIns .gridSer .headerSer nav .container-fluid .navbar-nav a, .gridSer .gridIns .headerSer nav .container-fluid .navbar-nav a {
+  color: black;
+  background-color: white;
+  font-size: 14px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  font-family: black "Comfortaa", cursive;
+  text-decoration: none;
+}
+.gridIns .mainIns {
+  grid-area: mainHome;
+  background: linear-gradient(#2ECC71, #82e0aa);
+  padding: 5px;
+}
+.gridIns .mainIns .flexTitutloIns h1 {
+  color: black;
+  text-align: center;
+  font-size: 60px;
+  font-family: "Euphoria Script", cursive;
+  padding-top: 10px;
+  padding-bottom: 20px;
+}
+.gridIns .mainIns .flexTitutloIns p {
+  color: black;
+  font-size: 20px;
+  margin: 13px;
+}
+.gridIns .mainIns .gridImgIns {
+  display: grid;
+  grid-template-columns: 1fr;
+  justify-items: center;
+  margin-top: 20px;
+}
+.gridIns .mainIns .gridImgIns .imagenesIns {
+  width: 25em;
+  height: 25em;
+  padding: 10px;
+  border-radius: 50px;
+}
+.gridIns .mainIns .flexTextoIns {
+  margin-top: 20px;
+}
+.gridIns .mainIns .flexTextoIns p {
+  padding: 15px;
+  font-size: 15px;
+  margin-bottom: 0px;
+}
+.gridIns .mainIns .articuloReglas h2 {
+  color: black;
+  text-align: center;
+  font-size: 45px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  font-family: "Euphoria Script", cursive;
+}
+.gridIns .mainIns .articuloReglas p {
+  display: none;
+}
+.gridIns .mainIns .articuloReglas ul {
+  padding-left: 0px;
+}
+.gridIns .mainIns .articuloReglas ul li {
+  font-size: 18px;
+  list-style-type: none;
+}
+.gridIns .ftIns {
+  grid-area: footerHome;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  padding-top: 10px;
+  background-color: #82e0aa;
+}
+.gridIns .ftIns p {
+  font-size: 20px;
+  margin-bottom: 1rem;
+}
+.gridIns .ftIns .flexBotonesIns {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  margin-left: 5px;
+}
+.gridIns .ftIns .flexBotonesIns .volverIns {
+  max-height: 39px;
+}
+.gridIns .ftIns .flexBotonesIns .iconosIns {
+  max-width: 47px;
+}
+
+@media (min-width: 524px) {
+  .gridIns {
+    display: grid;
+    grid-template-areas: "headerHome" "mainHome" "footerHome";
+    grid-template-rows: 3.8% 94% 6.1%;
+    grid-template-columns: 100%;
+  }
+  .gridIns .headerIns {
+    grid-area: headerHome;
+    border-bottom: 1px solid white;
+    padding: 0px;
+    padding-bottom: 2px;
+  }
+  .gridIns .headerIns nav {
+    flex-wrap: unset;
+    width: 100%;
+  }
+  .gridIns .headerIns nav .container-fluid {
+    padding: 0px;
+    flex-wrap: nowrap;
+    padding-left: 1px;
+  }
+  .gridIns .headerIns nav .container-fluid .navbar-brand {
+    margin: 0px;
+  }
+  .gridIns .headerIns nav .container-fluid .navbar-brand .logoIns {
+    max-width: 170px;
+  }
+  .gridIns .headerIns nav .container-fluid button {
+    display: none;
+  }
+  .gridIns .headerIns nav .container-fluid .collapse.navbar-collapse {
+    display: flex;
+    flex-direction: row;
+  }
+  .gridIns .headerIns nav .container-fluid .collapse.navbar-collapse .navbar-nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    margin-bottom: 0;
+    list-style: none;
+    width: 100%;
+  }
+  .gridIns .headerIns nav .container-fluid .collapse.navbar-collapse .navbar-nav .nav-linkIns {
+    padding: 3px 4px;
+    padding-bottom: 4.3px;
+    color: black;
+    background-color: #82e0aa;
+    border: 2px solid white;
+    border-radius: 20px;
+    font-size: 13px;
+    margin-left: 4px;
+  }
+  .gridIns .mainIns {
+    grid-area: mainHome;
+  }
+  .gridIns .mainIns .flexTitutloIns h1 {
+    padding: 30px;
+    font-size: 110px;
+  }
+  .gridIns .mainIns .gridImgIns {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    justify-items: center;
+    row-gap: 1px;
+  }
+  .gridIns .mainIns .articuloReglas h2 {
+    font-size: 70px;
+  }
+  .gridIns .ftIns {
+    grid-area: footerHome;
+    border-top: 1px solid white;
+  }
+  .gridIns .ftIns p {
+    font-size: 17px;
+  }
+  .gridIns .ftIns .flexBotonesIns {
+    margin-left: 8px;
+  }
+  .gridIns .ftIns .flexBotonesIns .volverIns {
+    width: 35px;
+    height: 35px;
+  }
+  .gridIns .ftIns .flexBotonesIns img {
+    width: 40px;
+    height: 40px;
+  }
+}
+@media (min-width: 868px) {
+  .gridIns {
+    display: grid;
+    grid-template-rows: 4.4% 94% 6.8%;
+  }
+  .gridIns .headerIns {
+    border-bottom: 2px solid white;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+  .gridIns .headerIns nav .container-fluid {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .gridIns .headerIns nav .container-fluid .navbar-brand .logoIns {
+    margin-top: 5px;
+    width: 282px;
+    max-width: 282px;
+  }
+  .gridIns .headerIns nav .container-fluid .collapse.navbar-collapse {
+    width: 100%;
+    height: 100%;
+  }
+  .gridIns .headerIns nav .container-fluid .collapse.navbar-collapse .navbar-nav {
+    width: 100%;
+  }
+  .gridIns .headerIns nav .container-fluid .collapse.navbar-collapse .navbar-nav .nav-linkIns {
+    padding-right: 5px;
+    padding-left: 5px;
+    color: black;
+    background-color: #82e0aa;
+    border: 2px solid white;
+    border-radius: 30px;
+    font-size: 21.5px;
+    margin-left: 5px;
+    padding-top: 4px;
+    padding-bottom: 5px;
+  }
+  .gridIns .mainIns .flexTitutloIns h1 {
+    padding-top: 15px;
+    padding-bottom: 15px;
+    font-size: 150px;
+  }
+  .gridIns .mainIns .flexTitutloIns p {
+    font-size: 25px;
+  }
+  .gridIns .mainIns .gridImgIns {
+    padding: 20px;
+    display: grid;
+    grid-template-columns: 33% 33% 33%;
+    -moz-column-gap: 5px;
+         column-gap: 5px;
+    row-gap: 5px;
+  }
+  .gridIns .mainIns .gridImgIns img {
+    width: 28em;
+    height: 28em;
+  }
+  .gridIns .mainIns .flexTextoIns p {
+    padding: 20px;
+    font-size: 20px;
+  }
+  .gridIns .mainIns .articuloReglas h2 {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    font-size: 90px;
+  }
+  .gridIns .mainIns .articuloReglas ul li {
+    font-size: 20px;
+  }
+  .gridIns .ftIns {
+    grid-area: footerHome;
+  }
+  .gridIns .ftIns p {
+    font-size: 19px;
+  }
+  .gridIns .ftIns .flexBotonesIns {
+    justify-content: space-evenly;
+    margin-left: 4px;
+  }
+  .gridIns .ftIns .flexBotonesIns .volverIns {
+    width: 40px;
+    height: 45px;
+  }
+  .gridIns .ftIns .flexBotonesIns a {
+    width: 45px;
+    height: 45px;
+  }
+  .gridIns .ftIns .flexBotonesIns a .iconosIns {
+    width: 45px;
+    height: 45px;
+  }
+}
+@media (min-width: 1096px) {
+  .gridIns {
+    display: grid;
+    grid-template-areas: "headerHome" "mainHome" "footerHome";
+    grid-template-rows: 3.7% 95% 4.7%;
+    grid-template-columns: 100%;
+  }
+  .gridIns .headerIns {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    border-bottom: 2px solid white;
+  }
+  .gridIns .headerIns nav .container-fluid {
+    margin-right: 50px;
+    margin-left: 50px;
+  }
+  .gridIns .headerIns nav .container-fluid .navbar-brand .logoIns {
+    width: 322px;
+    max-width: 322px;
+  }
+  .gridIns .headerIns nav .container-fluid .collapse.navbar-collapse .navbar-nav .nav-linkIns {
+    font-size: 29.5px;
+    padding: 4px;
+  }
+  .gridIns .headerIns nav .container-fluid .collapse.navbar-collapse .navbar-nav .nav-linkIns:hover {
+    background-color: #2ECC71;
+  }
+  .gridIns .mainIns .flexTitutloIns h1 {
+    padding-top: 50px;
+    font-size: 230px;
+  }
+  .gridIns .mainIns .flexTitutloIns p {
+    font-size: 35px;
+  }
+  .gridIns .mainIns .gridImgIns {
+    padding: 0px;
+  }
+  .gridIns .mainIns .gridImgIns .imagenesIns {
+    border-radius: 60px;
+    width: 40em;
+    height: 40em;
+  }
+  .gridIns .mainIns .gridImgIns .imagenesIns:hover {
+    transform: scale(1.02);
+  }
+  .gridIns .mainIns .flexTextoIns {
+    padding-top: 30px;
+  }
+  .gridIns .mainIns .flexTextoIns p {
+    padding: 30px 10px;
+    font-size: 35px;
+  }
+  .gridIns .mainIns .articuloReglas h2 {
+    font-size: 150px;
+  }
+  .gridIns .mainIns .articuloReglas p {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-size: 20px;
+    padding: 30px;
+    margin: 0px;
+  }
+  .gridIns .mainIns .articuloReglas ul li {
+    font-size: 35px;
+    padding: 20px;
+  }
+  .gridIns .ftIns {
+    border-top: 2px solid white;
+  }
+  .gridIns .ftIns p {
+    font-size: 30px;
+  }
+  .gridIns .ftIns .flexBotonesIns img:hover {
+    opacity: 50%;
+  }
+}
+/*ESTILOS GALERIA MOBILE FIRST COMENCE EN 316PX*/
+.gridGal {
+  text-align: center;
+  font-family: "Comfortaa", cursive;
+  display: grid;
+  grid-template-areas: "headerHome" "mainHome" "footerHome";
+  grid-template-rows: 4.1% 94% 5.2%;
+  min-height: 100vh;
+}
+.gridGal .headerGal {
+  grid-area: headerHome;
+  background-color: #A569BD;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  border-bottom: 1px solid white;
+  padding-left: 2px;
+  padding-right: 2px;
+}
+.gridGal .headerGal nav {
+  background-color: #A569BD;
+  padding: 0px;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.gridGal .headerGal nav .container-fluid {
+  display: flex;
+  flex-direction: row;
+  padding-right: 4px;
+  padding-left: 0px;
+}
+.gridGal .headerGal nav .navbar-brand {
+  padding: 0px;
+}
+.gridGal .headerGal nav .navbar-brand .logoGal {
+  width: 200px;
+}
+.gridGal .headerGal nav .navbar-nav {
+  margin-top: 2px;
+  margin-left: 4px;
+  margin-right: 0px;
+}
+.gridGal .headerGal nav .navbar-nav .nav-link {
+  color: black;
+  background-color: white;
+  font-size: 14px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  font-family: black "Comfortaa", cursive;
+  text-decoration: none;
+}
+.gridGal .mainGal {
+  grid-area: mainHome;
+  background: linear-gradient(#A569BD, #D2B4DE);
+  padding: 5px;
+}
+.gridGal .mainGal .flexTituloGal h1 {
+  color: black;
+  text-align: center;
+  font-family: "Euphoria Script", cursive;
+  padding-top: 10px;
+  padding-bottom: 20px;
+  font-size: 70px;
+}
+.gridGal .mainGal .flexTituloGal p {
+  padding: 10px;
+  font-size: 20px;
+}
+.gridGal .mainGal .gridImgGal {
+  display: grid;
+  grid-template-columns: 1fr;
+  justify-items: center;
+  margin-top: 20px;
+}
+.gridGal .mainGal .gridImgGal .imgGal {
+  width: 25em;
+  height: 25em;
+  padding: 10px;
+  border-radius: 50px;
+}
+.gridGal .mainGal article .flexHdosGal h2 {
+  color: black;
+  text-align: center;
+  font-size: 45px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  font-family: "Euphoria Script", cursive;
+}
+.gridGal .mainGal article .flexHdosGal p {
+  padding: 10px;
+  font-size: 15px;
+}
+.gridGal .flexFtGal {
+  grid-area: footerHome;
+  background-color: #D2B4DE;
+  border-top: 1px solid white;
+  padding-top: 12px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+.gridGal .flexFtGal p {
+  font-size: 20px;
+}
+.gridGal .flexFtGal .flexBotonesFtGal {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  margin-left: 10px;
+}
+.gridGal .flexFtGal .flexBotonesFtGal .volverGal {
+  max-height: 39px;
+}
+.gridGal .flexFtGal .flexBotonesFtGal .iconosGal {
+  max-width: 47px;
+}
+
+@media (min-width: 524px) {
+  .gridGal {
+    display: grid;
+    grid-template-areas: "headerHome" "mainHome" "footerHome";
+    grid-template-rows: 4.7% 93% 7.6%;
+    grid-template-columns: 100%;
+  }
+  .gridGal .headerGal {
+    grid-area: headerHome;
+    border-bottom: 1px solid white;
+    padding: 0px;
+    padding-bottom: 2px;
+  }
+  .gridGal .headerGal nav {
+    flex-wrap: unset;
+    width: 100%;
+  }
+  .gridGal .headerGal nav .container-fluid {
+    padding: 0px;
+    flex-wrap: nowrap;
+    padding-left: 1px;
+    padding-right: 6px;
+  }
+  .gridGal .headerGal nav .container-fluid .navbar-brand {
+    margin: 0px;
+  }
+  .gridGal .headerGal nav .container-fluid .navbar-brand .logoGal {
+    max-width: 170px;
+  }
+  .gridGal .headerGal nav .container-fluid button {
+    display: none;
+  }
+  .gridGal .headerGal nav .container-fluid .collapse.navbar-collapse {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+  .gridGal .headerGal nav .container-fluid .collapse.navbar-collapse .navbar-nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    margin-bottom: 0;
+    list-style: none;
+    width: 100%;
+  }
+  .gridGal .headerGal nav .container-fluid .collapse.navbar-collapse .navbar-nav .nav-link {
+    padding: 3px 4px;
+    padding-bottom: 4.3px;
+    color: black;
+    background-color: #D2B4DE;
+    border: 2px solid white;
+    border-radius: 20px;
+    font-size: 13px;
+    margin-left: 4px;
+  }
+  .gridGal .mainGal .flexTituloGal h1 {
+    font-size: 120px;
+  }
+  .gridGal .mainGal .flexTituloGal p {
+    font-size: 25px;
+  }
+  .gridGal .mainGal .gridImgGal {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    justify-items: center;
+    row-gap: 1px;
+  }
+  .gridGal .mainGal article .flexHdosGal h2 {
+    font-size: 70px;
+  }
+  .gridGal .mainGal article .flexHdosGal p {
+    font-size: 20px;
+  }
+  .gridGal .flexFtGal p {
+    font-size: 17px;
+  }
+  .gridGal .flexFtGal .flexBotonesFtGal {
+    margin-left: 8px;
+  }
+  .gridGal .flexFtGal .flexBotonesFtGal .volverGal {
+    width: 35px;
+    height: 35px;
+  }
+  .gridGal .flexFtGal .flexBotonesFtGal img {
+    max-width: 40px;
+  }
+}
+@media (min-width: 868px) {
+  .gridGal {
+    display: grid;
+    grid-template-rows: 5.6% 96% 8.6%;
+  }
+  .gridGal .headerGal {
+    border-bottom: 2px solid white;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+  .gridGal .headerGal nav .container-fluid {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+  .gridGal .headerGal nav .container-fluid .navbar-brand .logoGal {
+    margin-top: 5px;
+    width: 282px;
+    max-width: 282px;
+  }
+  .gridGal .headerGal nav .container-fluid .collapse.navbar-collapse {
+    width: 100%;
+    height: 100%;
+  }
+  .gridGal .headerGal nav .container-fluid .collapse.navbar-collapse .navbar-nav {
+    width: 100%;
+    margin-right: 5px;
+  }
+  .gridGal .headerGal nav .container-fluid .collapse.navbar-collapse .navbar-nav .nav-link {
+    padding-right: 5px;
+    padding-left: 5px;
+    color: black;
+    background-color: #D2B4DE;
+    border: 2px solid white;
+    border-radius: 30px;
+    font-size: 21.5px;
+    margin-left: 5px;
+    padding-top: 4px;
+    padding-bottom: 5px;
+  }
+  .gridGal .mainGal .flexTituloGal h1 {
+    padding-top: 15px;
+    padding-bottom: 15px;
+    font-size: 180px;
+  }
+  .gridGal .mainGal .flexTituloGal p {
+    font-size: 25px;
+  }
+  .gridGal .mainGal .gridImgGal {
+    padding: 20px;
+    display: grid;
+    grid-template-columns: 33% 33% 33%;
+    -moz-column-gap: 5px;
+         column-gap: 5px;
+    row-gap: 5px;
+  }
+  .gridGal .mainGal .gridImgGal img {
+    width: 28em;
+    height: 28em;
+  }
+  .gridGal .mainGal article .flexHdosGal h2 {
+    font-size: 100px;
+  }
+  .gridGal .flexFtGal {
+    padding-top: 10px;
+  }
+  .gridGal .flexFtGal p {
+    font-size: 19px;
+  }
+  .gridGal .flexFtGal .flexBotonesFtGal {
+    justify-content: space-evenly;
+  }
+  .gridGal .flexFtGal .flexBotonesFtGal .volverGal {
+    width: 54px;
+    height: 40px;
+  }
+  .gridGal .flexFtGal .flexBotonesFtGal img {
+    max-width: 45px;
+  }
+}
+@media (min-width: 1096px) {
+  .gridGal {
+    display: grid;
+    grid-template-areas: "headerHome" "mainHome" "footerHome";
+    grid-template-rows: 5.6% 94% 7.1%;
+    grid-template-columns: 100%;
+  }
+  .gridGal .headerGal {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    border-bottom: 2px solid white;
+  }
+  .gridGal .headerGal nav .container-fluid {
+    margin-right: 50px;
+    margin-left: 50px;
+  }
+  .gridGal .headerGal nav .container-fluid .navbar-brand .logoGal {
+    width: 322px;
+    max-width: 322px;
+  }
+  .gridGal .headerGal nav .container-fluid .collapse.navbar-collapse .navbar-nav .nav-link {
+    font-size: 29.5px;
+    padding: 4px;
+  }
+  .gridGal .headerGal nav .container-fluid .collapse.navbar-collapse .navbar-nav .nav-link:hover {
+    background-color: #A569BD;
+  }
+  .gridGal .mainGal .flexTituloGal h1 {
+    font-size: 240px;
+  }
+  .gridGal .mainGal .flexTituloGal p {
+    font-size: 35px;
+  }
+  .gridGal .mainGal .gridImgGal {
+    padding: 0px;
+  }
+  .gridGal .mainGal .gridImgGal .imgGal {
+    border-radius: 60px;
+    width: 40em;
+    height: 40em;
+  }
+  .gridGal .mainGal .gridImgGal .imgGal:hover {
+    transform: scale(1.02);
+  }
+  .gridGal .mainGal article .flexHdosGal h2 {
+    padding-bottom: 30px;
+    padding-top: 50px;
+    font-size: 180px;
+  }
+  .gridGal .mainGal article .flexHdosGal p {
+    font-size: 30px;
+  }
+  .gridGal .flexFtGal {
+    border-top: 2px solid white;
+  }
+  .gridGal .flexFtGal p {
+    font-size: 30px;
+  }
+  .gridGal .flexFtGal .flexBotonesFtGal {
+    margin-left: 4px;
+  }
+  .gridGal .flexFtGal .flexBotonesFtGal img:hover {
+    opacity: 50%;
+  }
+}
+/*COMENCE LOS ESTILOS EN 316PX*/
+.gridCon {
+  display: grid;
+  grid-template-areas: "headerHome" "mainHome" "footerHome";
+  grid-template-rows: 7.1% 84.8% 8%;
+  grid-template-columns: 100%;
+  min-height: 100vh;
+  font-family: black "Comfortaa", cursive;
+  gap: 1px;
+}
+.gridCon .flexHdCon {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  background-color: #F39C12;
+}
+.gridCon .flexHdCon .navbarCon {
+  background-color: #F39C12;
+  width: 100%;
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: between;
+  flex-wrap: wrap;
+  align-items: center;
+  padding: 5px;
+}
+.gridCon .flexHdCon .navbarCon .container-fluidCon {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: inherit;
+  align-items: center;
+  width: 100%;
+}
+.gridCon .flexHdCon .navbarCon .container-fluidCon .navbar-brandCon {
+  padding-top: 0.3125rem;
+  padding-bottom: 0.3122rem;
+}
+.gridCon .flexHdCon .navbarCon .container-fluidCon .navbar-brandCon .imgHdCon {
+  max-width: 199.5px;
+}
+.gridCon .flexHdCon .navbarCon .container-fluidCon .navbar-collapseCon {
+  width: 100%;
+}
+.gridCon .flexHdCon .navbarCon .container-fluidCon .navbar-collapseCon .navbar-navCon {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-left: 0;
+  margin-bottom: 0;
+  list-style: none;
+}
+.gridCon .flexHdCon .navbarCon .container-fluidCon .navbar-collapseCon .navbar-navCon .nav-linkCon {
+  color: black;
+  text-align: center;
+  background-color: white;
+  font-size: 14.1px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  margin-bottom: 0px;
+  text-decoration: none;
+}
+.gridCon .mainCon {
+  background: linear-gradient(#F39C12, #ffb74d);
+  padding: 20px;
+  padding-top: 10px;
+}
+.gridCon .mainCon .flexTituloCon {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.gridCon .mainCon .flexTituloCon h1 {
+  color: black;
+  text-align: center;
+  font-size: 70px;
+  margin-top: 0px;
+  margin-bottom: 20px;
+  font-family: "Euphoria Script", cursive;
+}
+.gridCon .mainCon .flexTituloCon p {
+  font-size: 20px;
+  font-family: black "Comfortaa", cursive;
+}
+.gridCon .mainCon .marcoForm {
+  border: 2px black solid;
+  border-radius: 20px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.gridCon .mainCon .marcoForm .palabraForm {
+  color: black;
+  font-family: "Comfortaa", cursive;
+  font-size: 22px;
+  margin: 0px 20px;
+}
+.gridCon .mainCon .marcoForm .formCon {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #ffb74d;
+  border-radius: 20px;
+  padding: 10px;
+}
+.gridCon .mainCon .marcoForm .formCon .flexFormulario {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 20px;
+}
+.gridCon .mainCon .marcoForm .formCon .flexFormulario .nombreInputs {
+  color: black;
+  font-family: "Comfortaa", cursive;
+  font-size: 22px;
+  margin: 10px 30px;
+}
+.gridCon .mainCon .marcoForm .formCon .flexFormulario .inputsForm {
+  width: 15em;
+  padding: 5px;
+  border-radius: 20px;
+  border: 2px solid white;
+  background-color: #ffb74d;
+  margin-bottom: 5px;
+  text-align: center;
+  font-size: 15px;
+}
+.gridCon .mainCon .marcoForm .formCon .flexInputCon {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  padding-bottom: 10px;
+  margin-left: 5px;
+}
+.gridCon .mainCon .marcoForm .formCon .flexInputCon .inputCon {
+  padding: 5px;
+  border: 2px solid white;
+  border-radius: 20px;
+  background-color: #F39C12;
+  margin-top: 10px;
+  font-family: "Comfortaa", cursive;
+  font-size: 22px;
+  margin-right: 5px;
+}
+.gridCon .mainCon .princesCon {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.gridCon .mainCon .princesCon .princesosCon {
+  border-radius: 20px;
+  width: 15em;
+  height: 15em;
+  margin: 60px 10px;
+}
+.gridCon .ftCon {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  padding-top: 11px;
+  background-color: #ffb74d;
+}
+.gridCon .ftCon p {
+  font-size: 20px;
+}
+.gridCon .ftCon .flexBotonesCon {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+.gridCon .ftCon .flexBotonesCon .volverCon {
+  margin: 0px;
+  width: 54px;
+  height: 40px;
+}
+.gridCon .ftCon .flexBotonesCon .iconoCon {
+  margin-top: 1px;
+  height: 48px;
+}
+
+/*PRIMER BREAKPOINT 524PX*/
+@media (min-width: 524px) {
+  .gridCon {
+    display: grid;
+    grid-template-areas: "headerHome" "mainHome" "footerHome";
+    grid-template-rows: 5.5% 87.1% 8.8%;
+  }
+  .gridCon .flexHdCon {
+    grid-area: headerHome;
+    border-bottom: 0.5px solid white;
+    padding: 0px;
+    padding-bottom: 2px;
+  }
+  .gridCon .flexHdCon .navbarCon {
+    flex-wrap: unset;
+    width: 100%;
+  }
+  .gridCon .flexHdCon .navbarCon .container-fluidCon {
+    padding: 0px;
+    flex-wrap: nowrap;
+    padding-left: 1px;
+  }
+  .gridCon .flexHdCon .navbarCon .container-fluidCon .navbar-brandCon {
+    margin: 0px;
+  }
+  .gridCon .flexHdCon .navbarCon .container-fluidCon .navbar-brandCon .imgHdCon {
+    max-width: 170px;
+  }
+  .gridCon .flexHdCon .navbarCon .container-fluidCon button {
+    display: none;
+  }
+  .gridCon .flexHdCon .navbarCon .container-fluidCon .navbar-collapseCon {
+    display: flex;
+    flex-direction: row;
+  }
+  .gridCon .flexHdCon .navbarCon .container-fluidCon .navbar-collapseCon .navbar-navCon {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 0;
+    list-style: none;
+    width: 100%;
+    justify-content: flex-end;
+  }
+  .gridCon .flexHdCon .navbarCon .container-fluidCon .navbar-collapseCon .navbar-navCon .nav-linkCon {
+    padding: 3px 4px;
+    padding-bottom: 4.3px;
+    color: black;
+    background-color: #ffb74d;
+    border: 2px solid white;
+    border-radius: 20px;
+    font-size: 13px;
+    margin-left: 4px;
+  }
+  .gridCon .mainCon .flexTituloCon h1 {
+    font-size: 130px;
+  }
+  .gridCon .mainCon .flexTituloCon p {
+    font-size: 25px;
+  }
+  .gridCon .mainCon .marcoForm {
+    margin: 0px 50px;
+  }
+  .gridCon .mainCon .marcoForm .inputsForm {
+    margin: 0px 30px;
+  }
+  .gridCon .ftCon {
+    justify-content: space-evenly;
+    padding-top: 8px;
+  }
+  .gridCon .ftCon p {
+    margin-top: 3px;
+    font-size: 17px;
+  }
+  .gridCon .ftCon .flexBotonesCon {
+    justify-content: space-around;
+    padding-bottom: 3px;
+    padding-left: 4px;
+  }
+  .gridCon .ftCon .flexBotonesCon .volverCon {
+    margin-top: 10px;
+    margin: 0px;
+    width: 40px;
+    height: 36px;
+  }
+  .gridCon .ftCon .flexBotonesCon .iconoCon {
+    height: 41px;
+  }
+}
+/*SEGUNDO BREAKPOINT 868PX*/
+@media (min-width: 868px) {
+  .gridCon {
+    display: grid;
+    grid-template-rows: 5% 93% 7.8%;
+    gap: 0px;
+  }
+  .gridCon .flexHdCon {
+    border-bottom: 2px solid white;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+  .gridCon .flexHdCon .navbarCon .container-fluidCon {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+  .gridCon .flexHdCon .navbarCon .container-fluidCon .navbar-brandCon .imgHdCon {
+    margin-top: 5px;
+    width: 282px;
+    max-width: 282px;
+  }
+  .gridCon .flexHdCon .navbarCon .container-fluidCon .navbar-collapseCon {
+    width: 100%;
+    height: 100%;
+  }
+  .gridCon .flexHdCon .navbarCon .container-fluidCon .navbar-collapseCon .navbar-navCon {
+    width: 100%;
+  }
+  .gridCon .flexHdCon .navbarCon .container-fluidCon .navbar-collapseCon .navbar-navCon .nav-linkCon {
+    padding-right: 5px;
+    padding-left: 5px;
+    color: black;
+    background-color: #ffb74d;
+    border: 2px solid white;
+    border-radius: 30px;
+    font-size: 21.5px;
+    margin-left: 5px;
+    padding-top: 4px;
+    padding-bottom: 5px;
+  }
+  .gridCon .mainCon .flexTituloCon h1 {
+    padding-top: 15px;
+    padding-bottom: 15px;
+    font-size: 180px;
+  }
+  .gridCon .mainCon .flexTituloCon p {
+    font-size: 25px;
+  }
+  .gridCon .mainCon .flexTituloCon .marcoForm .palabraForm {
+    color: black;
+    font-family: "Comfortaa", cursive;
+    font-size: 25px;
+    margin: 0px 40px;
+  }
+  .gridCon .mainCon .flexTituloCon .marcoForm .inputCon {
+    margin-top: 30px;
+  }
+  .gridCon .mainCon .princesCon .princesosCon {
+    border-radius: 20px;
+    width: 30em;
+    height: 30em;
+    margin: 60px 10px;
+  }
+  .gridCon .ftCon {
+    border-top: 1px solid white;
+    padding-top: 10px;
+  }
+  .gridCon .ftCon p {
+    font-size: 19px;
+    padding-bottom: 0px;
+  }
+  .gridCon .ftCon .flexBotonesCon {
+    padding-left: 0px;
+    align-items: center;
+    justify-content: space-evenly;
+  }
+  .gridCon .ftCon .flexBotonesCon .volverCon {
+    width: 50px;
+    height: 40px;
+  }
+  .gridCon .ftCon .flexBotonesCon .iconoCon {
+    height: 45px;
+  }
+}
+/*TERCER BREAKPOINT DE 1096, 
+LO DISEÑE DESDE LA VISTA DESKTOP*/
+@media (min-width: 1096px) {
+  .gridCon {
+    display: grid;
+    grid-template-areas: "headerHome" "mainHome" "footerHome";
+    grid-template-rows: 5.2% 90% 6.5%;
+    grid-template-columns: 100%;
+  }
+  .gridCon .flexHdCon {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    border-bottom: 2px solid white;
+  }
+  .gridCon .flexHdCon .navbarCon {
+    padding-left: 4px;
+  }
+  .gridCon .flexHdCon .navbarCon .container-fluidCon {
+    margin-right: 50px;
+    margin-left: 50px;
+  }
+  .gridCon .flexHdCon .navbarCon .container-fluidCon .navbar-brandCon .imgHdCon {
+    width: 322px;
+    max-width: 322px;
+  }
+  .gridCon .flexHdCon .navbarCon .container-fluidCon .navbar-collapseCon .navbar-navCon .nav-linkCon {
+    font-size: 29.3px;
+    padding: 4px;
+  }
+  .gridCon .flexHdCon .navbarCon .container-fluidCon .navbar-collapseCon .navbar-navCon .nav-linkCon:hover {
+    background-color: #F39C12;
+  }
+  .gridCon .mainCon .flexTituloCon h1 {
+    font-size: 240px;
+  }
+  .gridCon .mainCon .flexTituloCon p {
+    font-size: 35px;
+    margin-bottom: 50px;
+  }
+  .gridCon .mainCon .marcoForm {
+    margin: 10px 200px;
+    padding: 80px 200px;
+  }
+  .gridCon .mainCon .marcoForm .palabraForm {
+    color: black;
+    font-family: "Comfortaa", cursive;
+    font-size: 30px;
+    margin: 0px 40px;
+  }
+  .gridCon .mainCon .marcoForm .flexFormulario {
+    margin: 0px 40px;
+  }
+  .gridCon .mainCon .marcoForm .flexFormulario .nombreInputs {
+    font-size: 40px;
+  }
+  .gridCon .mainCon .marcoForm .flexFormulario .inputsForm {
+    height: 30px;
+    font-size: 25px;
+    color: black;
+    font-family: "Comfortaa", cursive;
+    text-align: center;
+  }
+  .gridCon .mainCon .princesCon .princesosCon {
+    margin-top: 15em;
+    margin-bottom: 18em;
+    width: 40em;
+    height: 40em;
+  }
+  .gridCon .ftCon {
+    border-top: 2px solid white;
+    padding-top: 8px;
+    padding-bottom: 0px;
+  }
+  .gridCon .ftCon p {
+    font-size: 30px;
+  }
+  .gridCon .ftCon .flexBotonesCon {
+    margin-right: 0px;
+  }
+  .gridCon .ftCon .flexBotonesCon .volverCon {
+    width: 55px;
+    height: 40px;
+    padding: 0px;
+    margin: 0px;
+    margin-top: 3px;
+  }
+  .gridCon .ftCon .flexBotonesCon .volverCon:hover {
+    opacity: 50%;
+  }
+  .gridCon .ftCon .flexBotonesCon .iconoCon {
+    height: 48px;
+  }
+  .gridCon .ftCon .flexBotonesCon .iconoCon:hover {
+    opacity: 50%;
+  }
+}/*# sourceMappingURL=style.css.map */

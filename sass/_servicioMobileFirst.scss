@@ -1,0 +1,641 @@
+@import "vars";
+
+@mixin display ($display, $direccion, $justify){
+
+    display: $display;
+    flex-direction: $direccion;
+    justify-content: $justify;
+    
+}
+
+
+
+
+/*MOBILES FIRST 316PX*/
+.gridSer {
+    display: grid;
+    grid-template-areas:
+        "headerSer"
+        "mainSer"
+        "footerSer";
+    grid-template-rows: 3.2% 95.8% 3.9%;
+    grid-template-columns: 100%;
+
+
+    .headerSer {
+        @extend  header ;
+        grid-area: headerSer;
+        background-color: $hdSer;
+        padding: 0px;
+        border-bottom: 1.8px solid $blanco;
+
+
+        nav {
+            background-color: $hdSer;
+            padding: 0px;
+            display: flex;
+            flex-wrap: nowrap;
+            flex-direction: row;
+            width: 100%;
+            height: 100%;
+
+
+            .container-fluid {
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+                background-color: $hdSer;
+                padding: 0px 3px;
+                width: 100%;
+                height: 100%;
+
+
+
+                .navbar-brand {
+                    margin-right: 72px;
+                    padding-top: 0px;
+                    padding-bottom: 0px;
+                }
+
+
+                .logoSer {
+                    width: 199.5px;
+                }
+
+
+                button {
+                    display: flex;
+                    margin-right: 2px;
+                }
+
+
+                .navbar-nav {
+                    padding-left: 3px;
+                    padding-right: 3px;
+
+
+                    .nav-link {
+                        color: $negro;
+                        background-color: $blanco;
+                        font-size: 14px;
+                        font-family: $negro 'Comfortaa', cursive;
+                        text-decoration: none;
+                        padding: 0.5rem 0rem;
+
+                    }
+                }
+            }
+        }
+    }
+
+
+    .mainSer {
+        grid-area: mainSer;
+        background: $mainSer;
+
+        .flexTituloSer {
+            @extend .flexTitulo;
+
+            h1 {
+                color: $negro;
+                text-align: center;
+                font-size: 70px;
+                font-family: 'Euphoria Script', cursive;
+                padding-top: 20px;
+                padding-bottom: 20px;
+            }
+
+            p {
+                color: $negro;
+                font-size: 20px;
+                margin-bottom: 20px;
+            }
+        }
+
+        .gridImgSer {
+            display: grid;
+            grid-template-columns: 1fr;
+            justify-items: center;
+            row-gap: 2em;
+
+            img {
+                width: 25em;
+                height: 25em;
+                padding: 10px;
+                border-radius: 50px;
+            }
+        }
+
+        .flexParrafosSer {
+            margin-top: 40px;
+            padding: 0px 20px;
+
+
+            p {
+                font-size: 17px;
+                margin-top: 25px;
+            }
+
+        }
+
+        .flexConSecSer {
+
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 0px 20px;
+
+            h2 {
+                color: $negro;
+                text-align: center;
+                font-size: 40px;
+                font-family: 'Euphoria Script', cursive;
+                padding-top: 30px;
+                padding-bottom: 20px;
+            }
+
+            p {
+                font-family: 'Comfortaa', cursive;
+                font-size: 20px;
+                padding: 0px;
+                margin: 0px;
+
+                .botonContactoSer {
+                    color: $negro;
+                    border: 1px solid $blanco;
+                    border-radius: 30px;
+                    background-color: $ftSer;
+                    font-size: 20px;
+                    padding-top: 2px;
+                    padding-left: 3px;
+                    margin-right: 2px;
+                    text-decoration: none;
+                }
+
+            }
+
+
+        }
+
+
+
+    }
+
+    .ftSer {
+        grid-area: footerSer;
+        background-color:$ftSer;
+        @include display(flex, column, space-evenly);
+        padding-top: 9px;
+        border-top: 1px solid $blanco;
+
+        .flexSeguinos {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            p {
+                font-size: 20px;
+            }
+
+        }
+
+        div {
+            @include display(flex, row, space-around);
+            align-items: baseline;
+
+            .volver {
+                margin: 0px;
+                width: 54px;
+                height: 40px;
+            }
+        }
+
+
+
+
+    }
+
+}
+
+@media (min-width: 524px) {
+
+
+    .gridSer {
+        display: grid;
+        grid-template-areas:
+            "headerSer"
+            "mainSer"
+            "footerSer";
+        grid-template-rows: 3.9% 94% 6.2%;
+        grid-template-columns: 100%;
+
+
+        .headerSer {
+            border-bottom: 1px solid $blanco;
+
+
+            nav {
+                flex-wrap: unset;
+                width: 100%;
+
+
+                .container-fluid {
+                    padding: 0px 2px;
+                    flex-wrap: nowrap;
+
+
+                    .navbar-brand {
+                        margin: 0px;
+
+
+                        .logoSer {
+                            max-width: 172px;
+                        }
+                    }
+
+
+                    button {
+                        display: none;
+                    }
+
+
+
+                    .collapse.navbar-collapse {
+                        display: flex;
+                        flex-direction: row;
+
+
+
+                        .navbar-nav {
+                            @include display(flex, row, flex-end);
+                            margin-bottom: 0;
+                            list-style: none;
+                            width: 100%;
+
+
+                            .nav-link {
+                                padding: 3px 4px;
+                                padding-bottom: 4.3px;
+                                color: $negro;
+                                background-color: $ftSer;
+                                border: 2px solid $blanco;
+                                border-radius: 20px;
+                                font-size: 13px;
+                                margin-left: 4px;
+                            }
+                        }
+                    }
+
+
+                }
+            }
+
+        }
+
+
+        .mainSer {
+
+
+            .flexTituloSer {
+
+                h1 {
+
+                    font-size: 120px;
+                    margin-top: 20px;
+                }
+
+                p {
+                    font-size: 30px;
+                    padding: 8px 15px;
+                }
+            }
+
+            .gridImgSer {
+                row-gap: 0px;
+
+            }
+
+            article {
+
+                p {
+                    padding-bottom: 50px;
+                }
+            }
+        }
+
+
+        .ftSer {
+
+            .flexSeguinos {
+
+                padding-left: 0px;
+
+                p {
+                    font-size: 17.3px;
+                    padding-right: 2px;
+                }
+            }
+
+            div {
+                @include display(flex, row, space-around);
+                align-items: center;
+                padding-left: 10px;
+
+
+                .iconoSer {
+
+                    .volver {
+
+                        max-width: 35px;
+                    }
+
+                    img {
+                        max-width: 41px;
+
+                    }
+
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: 868px) {
+
+
+
+    .gridSer {
+        display: grid;
+        grid-template-areas:
+            "headerSer"
+            "mainSer"
+            "footerSer";
+        grid-template-rows: 4.4% 94% 6.9%;
+
+        .headerSer {
+            border-bottom: 2px solid $blanco;
+            @include display(flex, row, space-around);
+
+            nav {
+
+                .container-fluid {
+                    @include display(flex, row, center);
+
+                    .navbar-brand {
+
+                        .logoSer {
+                            margin-top: 5px;
+                            width: 282px;
+                            max-width: 282px;
+                        }
+                    }
+
+                    .collapse.navbar-collapse {
+                        width: 100%;
+                        height: 100%;
+
+
+                        .navbar-nav {
+                            width: 100%;
+
+                            .nav-link {
+                                padding-right: 5px;
+                                padding-left: 5px;
+                                color: black;
+                                background-color: $ftSer;
+                                border: 2px solid $blanco;
+                                border-radius: 30px;
+                                font-size: 21.5px;
+                                margin-left: 5px;
+                                padding-top: 4px;
+                                padding-bottom: 5px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+
+        .mainSer {
+
+            .flexTituloSer {
+
+                .tituloSer {
+                    margin-top: 20px;
+                    padding: 10px;
+                    font-size: 160px;
+                }
+
+                p {
+                    font-size: 40px;
+                    margin-bottom: 30px;
+                }
+            }
+
+            .gridImgSer {
+                padding: 20px;
+                display: grid;
+                grid-template-columns: 33% 33% 33%;
+                column-gap: 5px;
+                row-gap: 5px;
+
+
+                img {
+                    width: 28em;
+                    height: 28em;
+                }
+            }
+
+            .flexParrafosSer {
+
+                p {
+                    font-size: 20px;
+                }
+
+            }
+
+            .flexConSecSer {
+
+                h2 {
+                    font-size: 60px;
+                    padding: 50px 0px
+                }
+            }
+
+        }
+
+
+        .ftSer {
+
+            .flexSeguinos {
+                p {
+                    font-size: 19px;
+                }
+            }
+
+
+            .botonesFtSer {
+                justify-content: space-evenly;
+                padding-left: 4px;
+
+
+                .iconoSer {
+                    img {
+                        max-width: 45px;
+                    }
+                }
+
+            }
+
+
+        }
+    }
+}
+
+@media (min-width: 1096px) {
+
+
+    .gridSer {
+        display: grid;
+        grid-template-areas:
+            "headerSer"
+            "mainSer"
+            "footerSer";
+        grid-template-rows: 5.1% 95% 6.4%;
+        grid-template-columns: 100%;
+
+
+        .headerSer {
+            @include display(flex, row, space-between);
+            border-bottom: 3px solid $blanco;
+
+            nav {
+
+                .container-fluid {
+                    margin-right: 50px;
+                    margin-left: 50px;
+
+                    .navbar-brand {
+
+                        .logoSer {
+                            width: 322px;
+                            max-width: 322px;
+                        }
+                    }
+
+                    .collapse.navbar-collapse {
+
+                        .navbar-nav {
+
+                            .nav-link {
+                                font-size: 29.5px;
+                                padding: 4px;
+
+                                &:hover {
+                                    background-color:$hdSer
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+
+        }
+
+
+        .mainSer {
+
+
+            .flexTituloSer {
+                h1 {
+                    font-size: 260px;
+                }
+
+            }
+
+            .gridImgSer {
+
+                padding: 0px;
+
+                img {
+                    border-radius: 60px;
+                    padding: 30px;
+                    width: 40em;
+                    height: 40em;
+
+                    &:hover {
+                        transform: scale(1.02);
+                    }
+
+                }
+
+
+            }
+
+            .flexParrafosSer {
+                p {
+                    padding: 10px;
+                    font-size: 25px;
+                }
+            }
+
+            .flexConSecSer {
+
+                h2 {
+                    padding-top: 50px;
+                    padding-bottom: 50px;
+                    font-size: 100px;
+                }
+
+                p {
+                    font-size: 25px;
+
+                    .botonContactoSer {
+
+                        &:hover {
+                            opacity: 50%;
+                        }
+                    }
+
+                }
+
+
+
+            }
+
+
+        }
+
+        .ftSer {
+
+            border-top: 2px solid $blanco;
+
+            .flexSeguinos {
+                p {
+                    font-size: 30px;
+                }
+            }
+
+            .botonesFtSer {
+
+
+
+                img {
+
+                    width: 49px;
+
+                    &:hover {
+                        opacity: 50%;
+                    }
+                }
+
+
+            }
+
+
+
+        }
+    }
+}

@@ -1,0 +1,491 @@
+@import "vars";
+
+@mixin display ($display, $direccion, $justify){
+
+    display: $display;
+    flex-direction: $direccion;
+    justify-content: $justify;
+    
+}
+
+
+/*ESTILOS HOME MOBILE FIRST COMENCE EN 316PX*/
+
+
+
+
+
+.gridHome {
+    text-align: center;
+    font-family: 'Comfortaa', cursive;
+    display: grid;
+    grid-template-areas:
+        "headerHome"
+        "mainHome"
+        "footerHome";
+    grid-template-rows: 4% 91% 5%;
+    min-height: 100vh;
+
+
+    header {
+        grid-area: headerHome;
+        background-color: $hdHome;
+        border-bottom: 1px solid $blanco;
+        @include display(flex, row, space-between);
+        
+
+        nav {
+            background-color: $hdHome;
+            padding: 0px;
+            width: 100%;
+            
+        @include display(flex, row, space-between);
+
+
+
+            .container-fluid {
+                padding: 5px;
+                display: flex;
+                flex-direction: row;
+
+
+                .logoHome {
+                    max-width: 200px;
+                }
+
+
+
+
+                div {
+
+                    a {
+                        color: $negro;
+                        background-color: $blanco;
+                        font-size: 14px;
+                        font-family: $negro 'Comfortaa', cursive;
+                        text-decoration: none;
+
+                    }
+                }
+
+            }
+
+        }
+    }
+
+
+
+
+    main {
+        grid-area: mainHome;
+        background: $mainHome;
+        padding: 5px;
+
+
+        .flexTitulo {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            h1 {
+                color: $negro;
+                font-size: 57px;
+                margin-top: 10px;
+                margin-bottom: 20px;
+                font-family: 'Euphoria Script', cursive;
+            }
+
+            p {
+                color: $negro;
+                font-size: 20px;
+                margin-bottom: 20px;
+            }
+        }
+
+
+
+
+        .imgHome {
+            display: grid;
+            grid-template-columns: 1fr;
+            justify-items: center;
+
+            img {
+                width: 25em;
+                height: 25em;
+                padding: 10px;
+                border-radius: 50px;
+            }
+        }
+
+
+
+        article {
+
+            section {
+                padding: 10px;
+                margin-bottom: 40px;
+                @include display(flex, column, center);
+
+                h2 {
+                    color: $negro;
+                    text-align: center;
+                    font-size: 50px;
+                    margin-top: 20px;
+                    margin-bottom: 20px;
+                    font-family: 'Euphoria Script', cursive;
+                }
+
+                p {
+                    font-size: 17px;
+                    margin-bottom: 40px;
+                }
+
+            }
+        }
+    }
+
+
+
+    footer {
+        grid-area: footerHome;
+        padding-top: 10px;
+        background-color: $ftHome;
+        border-top: 1px solid $blanco;
+        @include display(flex,column,space-evenly);
+
+
+        p {
+            font-size: 20px;
+        }
+
+        div {
+            @include display(flex, row, space-around);
+            align-items: center;
+
+
+            .volver {
+                margin: 0px;
+                width: 54px;
+                height: 40px;
+            }
+
+        }
+    }
+
+}
+
+
+/*PRIMER BREAKPOINT DE 524PX*/
+
+@media (min-width:524px) {
+
+    .gridHome {
+        display: grid;
+        grid-template-areas:
+            "headerHome"
+            "mainHome"
+            "footerHome";
+        grid-template-rows: 5% 87% 8%;
+
+
+
+
+        header {
+            border-bottom: 1px solid $blanco;
+
+            nav {
+                flex-wrap: unset;
+                width: 100%;
+
+                .navbar-brand {
+                    margin: 0px;
+
+                    .logoHome {
+                        max-width: 200px;
+                    }
+                }
+
+                button {
+                    display: none;
+                }
+
+                .collapse.navbar-collapse {
+                    display: flex;
+                    flex-direction: row;
+
+
+                    .navbar-nav {
+                        @include display(flex, row, flex-end);
+                        padding-left: 20px;
+                        margin-bottom: 0;
+                        list-style: none;
+                        width: 100%;
+
+                        .nav-link {
+                            padding-right: 5px;
+                            padding-left: 5px;
+                            color: $negro;
+                            background-color: $ftHome;
+                            border: 2px solid $blanco;
+                            border-radius: 20px;
+                            font-size: 15px;
+                            margin-left: 5px;
+                        }
+                    }
+                }
+            }
+        }
+
+        main {
+
+            .flexTitulo {
+
+                h1 {
+
+                    font-size: 110px;
+                    margin-top: 50px;
+                }
+
+                p {
+                    font-size: 40px;
+                }
+
+            }
+
+            .imgHome {
+                display: grid;
+                grid-template-columns: 50% 50%;
+                justify-items: center;
+
+            }
+
+            .flexSecHome {
+                h2 {
+                    margin-top: 30px;
+                    margin-bottom: 20px;
+                    font-size: 90px;
+                }
+
+                p {
+
+                    font-size: 25px;
+                    margin-bottom: 10px;
+                }
+
+            }
+
+            footer {
+
+                p {
+                    font-size: 25px;
+                }
+
+                div {
+                    @include display(flex, row, space-evenly);
+                    align-items: center;
+                }
+
+
+            }
+
+        }
+
+    }
+
+}
+
+/*SEGUNDO BRACKPOINT DE 868*/
+
+@media (min-width: 868px) {
+
+    .gridHome {
+        display: grid;
+        grid-template-areas:
+            "headerHome"
+            "mainHome"
+            "footerHome";
+        grid-template-rows: 5.1% 89% 8%;
+
+        header {
+            border-bottom: 2.4px solid $blanco;
+            @include display(flex, row, space-around);
+
+            nav {
+
+                .navbar-brand .logoHome {
+                    margin-top: 5px;
+                    max-width: 300px;
+                }
+
+                .collapse.navbar-collapse {
+
+
+                    .navbar-nav {
+
+                        .nav-link {
+                            padding-right: 5px;
+                            padding-left: 5px;
+                            color: black;
+                            background-color: $ftHome;
+                            border: 2px solid $blanco;
+                            border-radius: 30px;
+                            font-size: 23px;
+                            margin-left: 5px;
+                        }
+                    }
+                }
+            }
+        }
+
+
+
+
+        main {
+
+            .flexTitulo {
+
+                h1 {
+                    margin-top: 30px;
+                    padding: 20px;
+                    font-size: 160px;
+                }
+
+                p {
+                    font-size: 50px;
+                    margin-bottom: 30px;
+                }
+            }
+
+            .imgHome {
+                display: grid;
+                grid-template-columns: 33% 33% 33%;
+                gap: 5px;
+
+                img {
+                    width: 30em;
+                    height: 30em;
+                }
+            }
+
+            h2 {
+                font-size: 140px;
+                margin-bottom: 40px;
+            }
+
+            .somosHome {
+                font-size: 35px;
+                margin-bottom: 30px;
+            }
+
+        }
+
+        .flexBotonesHm {
+            justify-content: space-evenly;
+        }
+    }
+}
+
+/*TERCER BREAKPOINT DE 1096 VISTA DESKTOP*/
+
+@media (min-width: 1096px) {
+
+    .gridHome {
+        display: grid;
+        grid-template-areas:
+            "headerHome"
+            "mainHome"
+            "footerHome";
+        grid-template-rows: 5% 88.7% 6.3%;
+
+        header {
+            justify-content: space-between;
+            border-bottom: 2px solid $blanco;
+
+            nav {
+
+                .container-fluid {
+                    margin-right: 50px;
+                    margin-left: 50px;
+
+                    .navbar-brand .logoHome {
+                        max-width: 400px;
+                    }
+
+                    .collapse.navbar-collapse .navbar-nav .nav-link {
+                        font-size: 29px;
+
+                        &:hover {
+                            background-color: $hdHome
+                        }
+
+                    }
+
+                }
+            }
+        }
+
+        main {
+
+            .flexTitulo {
+                h1 {
+                    font-size: 240px;
+                }
+
+                p {
+                    font-size: 60px;
+                    padding-bottom: 50px;
+                }
+            }
+
+            .imgHome {
+
+                img {
+                    width: 40em;
+                    height: 40em;
+
+                    &:hover {
+                        transform: scale(1.02);
+                    }
+                }
+            }
+
+            .flexSecHome {
+                padding-right: 20px;
+                padding-bottom: 100px;
+                padding-left: 20px;
+
+                h2 {
+                    padding-top: 40px;
+                    padding-bottom: 10px;
+                    font-size: 150px;
+
+                }
+
+                p {
+                    font-size: 35px;
+                }
+
+            }
+        }
+
+        footer {
+            @include display(flex, column, space-evenly);
+            border-top: 2px solid $blanco;
+
+
+            p {
+                font-family: 'Comfortaa', cursive;
+                font-size: 30px;
+            }
+
+            .iconoHome {
+                width: 48px;
+
+                &:hover {
+                    opacity: 50%;
+                }
+            }
+        }
+    }
+}

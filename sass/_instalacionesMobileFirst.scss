@@ -1,0 +1,695 @@
+@import "vars";
+
+@mixin display ($display, $direccion, $justify){
+
+    display: $display;
+    flex-direction: $direccion;
+    justify-content: $justify;
+    
+}
+
+
+/*ESTILOS INSTALACIONES MOBILE FIRST COMENCE EN 316PX*/
+
+
+
+
+
+.gridIns {
+    text-align: center;
+    font-family: 'Comfortaa', cursive;
+    display: grid;
+    grid-template-areas:
+        "headerHome"
+        "mainHome"
+        "footerHome";
+    grid-template-rows: 3.3% 95% 4.1%;
+    min-height: 100vh;
+
+    
+    header {
+        grid-area: headerHome;
+        @include display(flex, row, space-between);
+        background-color: $hdIns;
+        border-bottom: 1px solid $blanco;
+        padding-left: 2px;
+        padding-right: 2px;
+
+        nav {
+            background-color: $hdIns;
+            padding: 0px;
+            width: 100%;
+            @include display(flex, row, center);
+
+            .container-fluid {
+                @include display(flex, row, space-between);
+                padding-right: 0px;
+                padding-left: 0px;
+
+
+                .navbar-brand {
+                    padding: 0px;
+
+                    img {
+                        width: 200px;
+                    }
+                }
+
+                button {
+
+                    width: 3em;
+                    height: 2.1em;
+                    padding: 2px;
+                    margin-right: 2px;
+                    border-radius: 5px;
+
+
+                    .navbar-toggler-icon {
+                        display: inline-block;
+                        width: 1.6em;
+                        height: 1.7em;
+                    }
+                }
+
+
+                .navbar-nav {
+                    margin-top: 5px;
+                    margin-left: 5px;
+                    margin-right: 5px;
+
+                    a {
+                        color: $negro;
+                        background-color: $blanco;
+                        font-size: 14px;
+                        padding-top: 5px;
+                        padding-bottom: 5px;
+                        font-family: $negro 'Comfortaa', cursive;
+                        text-decoration: none;
+
+
+                    }
+                }
+            }
+        }
+
+    }
+
+
+    .mainIns {
+
+
+        grid-area: mainHome;
+        background: $mainIns;
+        padding: 5px;
+
+        .flexTitutloIns {
+
+            h1 {
+                color: $negro;
+                text-align: center;
+                font-size: 60px;
+                font-family: 'Euphoria Script', cursive;
+                padding-top: 10px;
+                padding-bottom: 20px;
+            }
+
+            p {
+                color: $negro;
+                font-size: 20px;
+                margin: 13px;
+            }
+        }
+
+
+        .gridImgIns {
+            display: grid;
+            grid-template-columns: 1fr;
+            justify-items: center;
+            margin-top: 20px;
+
+            .imagenesIns {
+                width: 25em;
+                height: 25em;
+                padding: 10px;
+                border-radius: 50px;
+            }
+
+        }
+
+
+        .flexTextoIns {
+
+            margin-top: 20px;
+
+            p {
+                padding: 15px;
+                font-size: 15px;
+                margin-bottom: 0px;
+            }
+
+
+        }
+
+
+        .articuloReglas {
+
+
+            h2 {
+                color: $negro;
+                text-align: center;
+                font-size: 45px;
+                margin-top: 20px;
+                margin-bottom: 20px;
+                font-family: 'Euphoria Script', cursive;
+            }
+
+            p {
+                display: none;
+            }
+
+            ul {
+
+                padding-left: 0px;
+
+                li {
+                    font-size: 18px;
+                    list-style-type: none;
+
+                }
+            }
+        }
+
+    }
+
+
+    .ftIns {
+        grid-area: footerHome;
+        @include display(flex, column, space-evenly);
+        padding-top: 10px;
+        background-color: $ftIns;
+
+        p {
+            font-size: 20px;
+            margin-bottom: 1rem;
+        }
+
+        .flexBotonesIns {
+            @include display(flex, row, space-around);
+            align-items: center;
+            margin-left: 5px;
+
+            .volverIns {
+                max-height: 39px;
+            }
+
+            .iconosIns {
+                max-width: 47px;
+            }
+
+        }
+
+    }
+}
+
+
+
+@media (min-width: 524px) {
+
+
+    .gridIns {
+        display: grid;
+        grid-template-areas:
+            "headerHome"
+            "mainHome"
+            "footerHome";
+        grid-template-rows: 3.8% 94% 6.1%;
+        grid-template-columns: 100%;
+
+
+        .headerIns {
+            grid-area: headerHome;
+            border-bottom: 1px solid $blanco;
+            padding: 0px;
+            padding-bottom: 2px;
+
+
+            nav {
+                flex-wrap: unset;
+                width: 100%;
+
+
+                .container-fluid {
+                    padding: 0px;
+                    flex-wrap: nowrap;
+                    padding-left: 1px;
+
+
+                    .navbar-brand {
+                        margin: 0px;
+
+
+                        .logoIns {
+                            max-width: 170px;
+                        }
+                    }
+
+
+                    button {
+                        display: none;
+                    }
+
+
+
+                    .collapse.navbar-collapse {
+                        display: flex;
+                        flex-direction: row;
+
+
+
+                        .navbar-nav {
+                            @include display(flex, row, flex-end);
+                            margin-bottom: 0;
+                            list-style: none;
+                            width: 100%;
+
+
+                            .nav-linkIns {
+                                padding: 3px 4px;
+                                padding-bottom: 4.3px;
+                                color: $negro;
+                                background-color: $ftIns;
+                                border: 2px solid $blanco;
+                                border-radius: 20px;
+                                font-size: 13px;
+                                margin-left: 4px;
+                            }
+                        }
+                    }
+
+
+                }
+            }
+
+        }
+
+        .mainIns {
+            grid-area: mainHome;
+
+            .flexTitutloIns {
+
+                h1 {
+                    padding: 30px;
+                    font-size: 110px;
+                }
+
+            }
+
+            .gridImgIns {
+                display: grid;
+                grid-template-columns: 50% 50%;
+                justify-items: center;
+                row-gap: 1px;
+            }
+
+
+            .articuloReglas {
+
+                h2 {
+                    font-size: 70px;
+                }
+
+
+
+            }
+        }
+
+
+
+        .ftIns {
+            grid-area: footerHome;
+            border-top: 1px solid $blanco;
+
+            p {
+                font-size: 17px;
+            }
+
+
+
+            .flexBotonesIns {
+
+                margin-left: 8px;
+
+                .volverIns {
+                    width: 35px;
+                    height: 35px;
+                }
+
+                img {
+                    width: 40px;
+                    height: 40px;
+                }
+
+
+            }
+
+
+
+
+        }
+
+
+
+
+
+    }
+
+
+
+
+
+
+
+
+
+}
+
+@media (min-width: 868px) {
+
+    .gridIns {
+        display: grid;
+        grid-template-rows: 4.4% 94% 6.8%;
+
+        .headerIns {
+            border-bottom: 2px solid $blanco;
+            @include display(flex, row, space-around);
+
+            nav {
+
+                .container-fluid {
+                    @include display(flex, row, space-between);
+
+                    .navbar-brand {
+
+                        .logoIns {
+                            margin-top: 5px;
+                            width: 282px;
+                            max-width: 282px;
+                        }
+                    }
+
+                    .collapse.navbar-collapse {
+                        width: 100%;
+                        height: 100%;
+
+
+                        .navbar-nav {
+                            width: 100%;
+
+                            .nav-linkIns {
+                                padding-right: 5px;
+                                padding-left: 5px;
+                                color: black;
+                                background-color: $ftIns;
+                                border: 2px solid $blanco;
+                                border-radius: 30px;
+                                font-size: 21.5px;
+                                margin-left: 5px;
+                                padding-top: 4px;
+                                padding-bottom: 5px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .mainIns {
+
+            .flexTitutloIns {
+
+                h1 {
+                    padding-top: 15px;
+                    padding-bottom: 15px;
+                    font-size: 150px;
+                }
+
+                p {
+                    font-size: 25px;
+                }
+            }
+
+            .gridImgIns {
+                padding: 20px;
+                display: grid;
+                grid-template-columns: 33% 33% 33%;
+                column-gap: 5px;
+                row-gap: 5px;
+
+
+                img {
+                    width: 28em;
+                    height: 28em;
+                }
+            }
+
+            .flexTextoIns {
+
+                p {
+                    padding: 20px;
+                    font-size: 20px;
+                }
+
+            }
+
+            .articuloReglas {
+
+
+                h2 {
+                    padding-top: 20px;
+                    padding-bottom: 20px;
+                    font-size: 90px;
+                }
+
+                ul {
+
+                    li {
+                        font-size: 20px;
+                    }
+
+
+
+                }
+
+
+            }
+
+
+
+
+
+        }
+
+
+        .ftIns {
+            grid-area: footerHome;
+
+            p {
+                font-size: 19px;
+            }
+
+
+            .flexBotonesIns {
+
+                justify-content: space-evenly;
+                margin-left: 4px;
+
+                .volverIns {
+                    width: 40px;
+                    height: 45px;
+                }
+
+                a {
+                    width: 45px;
+                    height: 45px;
+
+                    .iconosIns {
+                        width: 45px;
+                        height: 45px;
+                    }
+                }
+
+
+            }
+
+        }
+
+
+
+
+
+    }
+}
+
+@media (min-width: 1096px) {
+
+    .gridIns {
+        display: grid;
+        grid-template-areas:
+            "headerHome"
+            "mainHome"
+            "footerHome";
+        grid-template-rows: 3.7% 95% 4.7%;
+        grid-template-columns: 100%;
+
+
+        .headerIns {
+            @include display(flex, row, space-between);
+            border-bottom: 2px solid $blanco;
+
+            nav {
+
+                .container-fluid {
+                    margin-right: 50px;
+                    margin-left: 50px;
+
+                    .navbar-brand {
+
+                        .logoIns {
+                            width: 322px;
+                            max-width: 322px;
+                        }
+                    }
+
+                    .collapse.navbar-collapse {
+
+                        .navbar-nav {
+
+                            .nav-linkIns {
+                                font-size: 29.5px;
+                                padding: 4px;
+
+                                &:hover {
+                                    background-color: $hdIns
+                                }
+
+                            }
+                        }
+                    }
+                }
+            }
+
+
+        }
+
+        .mainIns {
+
+
+            .flexTitutloIns {
+
+                h1 {
+                    padding-top: 50px;
+                    font-size: 230px;
+                }
+
+
+                p {
+                    font-size: 35px;
+                }
+            }
+
+
+            .gridImgIns {
+
+                padding: 0px;
+
+                .imagenesIns {
+                    border-radius: 60px;
+                    width: 40em;
+                    height: 40em;
+
+                    &:hover {
+                        transform: scale(1.02);
+                    }
+
+                }
+
+
+            }
+
+            .flexTextoIns {
+                padding-top: 30px;
+
+                p {
+                    padding: 30px 10px;
+                    font-size: 35px
+                }
+            }
+
+
+            .articuloReglas {
+
+                h2 {
+                    font-size: 150px;
+                }
+
+                p {
+                    @include display(flex, column, center);
+                    font-size: 20px;
+                    padding: 30px;
+                    margin: 0px;
+                }
+
+                ul {
+
+                    li {
+
+                        font-size: 35px;
+                        padding: 20px;
+                    }
+
+
+
+                }
+
+
+
+            }
+
+        }
+
+
+
+        .ftIns {
+            border-top: 2px solid $blanco;
+
+            p {
+
+                font-size: 30px;
+            }
+
+            .flexBotonesIns {
+
+                img {
+
+                    &:hover {
+                        opacity: 50%;
+                    }
+                }
+
+
+
+            }
+        }
+
+
+    }
+
+
+
+
+
+
+
+
+
+}
