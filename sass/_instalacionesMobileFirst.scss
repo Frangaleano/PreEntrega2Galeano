@@ -187,6 +187,7 @@
         @include display(flex, column, space-evenly);
         padding-top: 10px;
         background-color: $ftIns;
+        border-top: 1px solid white;
 
         p {
             font-size: 20px;
