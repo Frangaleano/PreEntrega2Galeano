@@ -373,7 +373,6 @@ body {
 }
 .gridSer .headerSer nav .container-fluid button {
   display: flex;
-  margin-right: 2px;
 }
 .gridSer .headerSer nav .container-fluid .navbar-nav {
   padding-left: 3px;
@@ -848,6 +847,7 @@ body {
   justify-content: space-evenly;
   padding-top: 10px;
   background-color: #82e0aa;
+  border-top: 1px solid white;
 }
 .gridIns .ftIns p {
   font-size: 20px;
