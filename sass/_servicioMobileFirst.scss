@@ -19,7 +19,7 @@
         "mainSer"
         "footerSer";
     grid-template-rows: 3.2% 95.8% 3.9%;
-    grid-template-columns: 100%;
+    min-height: 100vh;
 
 
     .headerSer {
@@ -225,8 +225,7 @@
             "headerSer"
             "mainSer"
             "footerSer";
-        grid-template-rows: 3.9% 94% 6.2%;
-        grid-template-columns: 100%;
+        grid-template-rows: 2.7% 94% 4.5%;
 
 
         .headerSer {
@@ -502,7 +501,6 @@
             "mainSer"
             "footerSer";
         grid-template-rows: 5.1% 95% 6.4%;
-        grid-template-columns: 100%;
 
 
         .headerSer {

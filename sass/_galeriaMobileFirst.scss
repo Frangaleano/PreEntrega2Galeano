@@ -183,7 +183,6 @@
             "mainHome"
             "footerHome";
         grid-template-rows: 4.7% 93% 7.6%;
-        grid-template-columns: 100%;
 
 
         .headerGal {
@@ -474,8 +473,6 @@
             "mainHome"
             "footerHome";
         grid-template-rows: 5.6% 94% 7.1%;
-        grid-template-columns: 100%;
-
 
         .headerGal {
             @include display(flex, row, space-between);
