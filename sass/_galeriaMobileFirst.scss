@@ -532,9 +532,11 @@
                 padding: 0px;
 
                 .imgGal {
-                    border-radius: 60px;
                     width: 40em;
                     height: 40em;
+                    padding: 0px;
+                    margin-top: 15px;
+                    box-shadow: 3px 7px 0px 2px $ftGal;
 
                     &:hover {
                         transform: scale(1.02);

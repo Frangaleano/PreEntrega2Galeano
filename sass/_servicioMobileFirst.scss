@@ -546,7 +546,7 @@
 
 
             .flexTituloSer {
-                h1 {
+                .tituloSer {
                     font-size: 260px;
                 }
 
@@ -557,10 +557,12 @@
                 padding: 0px;
 
                 img {
-                    border-radius: 60px;
-                    padding: 30px;
                     width: 40em;
                     height: 40em;
+                    padding: 0px;
+                    margin-top: 15px;
+                    box-shadow: 3px 7px 0px 2px $ftSer;
+
 
                     &:hover {
                         transform: scale(1.02);

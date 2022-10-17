@@ -602,9 +602,13 @@
                 padding: 0px;
 
                 .imagenesIns {
-                    border-radius: 60px;
+
                     width: 40em;
                     height: 40em;
+                    padding: 0px;
+                    margin-top: 15px;
+                    box-shadow: 3px 7px 0px 2px $ftIns;
+
 
                     &:hover {
                         transform: scale(1.02);
