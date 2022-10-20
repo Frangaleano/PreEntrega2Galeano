@@ -1,4 +1,3 @@
-@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&family=Euphoria+Script&display=swap");
 * {
   margin: 0em;
@@ -12,9 +11,7 @@ html {
 body {
   font-family: "Comfortaa", cursive;
   text-align: center;
-}
-
-/*ESTILOS HOME MOBILE FIRST COMENCE EN 316PX*/
+} /*ESTILOS HOME MOBILE FIRST COMENCE EN 316PX*/
 .gridHome {
   text-align: center;
   font-family: "Comfortaa", cursive;
@@ -23,7 +20,7 @@ body {
   grid-template-rows: 4% 91% 5%;
   min-height: 100vh;
 }
-.gridHome header, .gridHome .gridSer .headerSer, .gridSer .gridHome .headerSer {
+.gridHome header {
   grid-area: headerHome;
   background-color: #ec407a;
   border-bottom: 1px solid white;
@@ -31,7 +28,7 @@ body {
   flex-direction: row;
   justify-content: space-between;
 }
-.gridHome header nav, .gridHome .gridSer .headerSer nav, .gridSer .gridHome .headerSer nav {
+.gridHome header nav {
   background-color: #ec407a;
   padding: 0px;
   width: 100%;
@@ -39,15 +36,15 @@ body {
   flex-direction: row;
   justify-content: space-between;
 }
-.gridHome header nav .container-fluid, .gridHome .gridSer .headerSer nav .container-fluid, .gridSer .gridHome .headerSer nav .container-fluid {
+.gridHome header nav .container-fluid {
   padding: 5px;
   display: flex;
   flex-direction: row;
 }
-.gridHome header nav .container-fluid .logoHome, .gridHome .gridSer .headerSer nav .container-fluid .logoHome, .gridSer .gridHome .headerSer nav .container-fluid .logoHome {
+.gridHome header nav .container-fluid .logoHome {
   max-width: 200px;
 }
-.gridHome header nav .container-fluid div a, .gridHome .gridSer .headerSer nav .container-fluid div a, .gridSer .gridHome .headerSer nav .container-fluid div a {
+.gridHome header nav .container-fluid div .nav-link {
   color: black;
   background-color: white;
   font-size: 14px;
@@ -126,8 +123,12 @@ body {
 }
 .gridHome footer div .volver {
   margin: 0px;
-  width: 54px;
-  height: 40px;
+  width: 44px;
+  height: 30px;
+}
+.gridHome footer div .iconoHome {
+  width: 44px;
+  height: 38px;
 }
 
 /*PRIMER BREAKPOINT DE 524PX*/
@@ -137,27 +138,27 @@ body {
     grid-template-areas: "headerHome" "mainHome" "footerHome";
     grid-template-rows: 5% 87% 8%;
   }
-  .gridHome header, .gridHome .gridSer .headerSer, .gridSer .gridHome .headerSer {
+  .gridHome header {
     border-bottom: 1px solid white;
   }
-  .gridHome header nav, .gridHome .gridSer .headerSer nav, .gridSer .gridHome .headerSer nav {
+  .gridHome header nav {
     flex-wrap: unset;
     width: 100%;
   }
-  .gridHome header nav .navbar-brand, .gridHome .gridSer .headerSer nav .navbar-brand, .gridSer .gridHome .headerSer nav .navbar-brand {
+  .gridHome header nav .navbar-brand {
     margin: 0px;
   }
-  .gridHome header nav .navbar-brand .logoHome, .gridHome .gridSer .headerSer nav .navbar-brand .logoHome, .gridSer .gridHome .headerSer nav .navbar-brand .logoHome {
+  .gridHome header nav .navbar-brand .logoHome {
     max-width: 200px;
   }
-  .gridHome header nav button, .gridHome .gridSer .headerSer nav button, .gridSer .gridHome .headerSer nav button {
+  .gridHome header nav button {
     display: none;
   }
-  .gridHome header nav .collapse.navbar-collapse, .gridHome .gridSer .headerSer nav .collapse.navbar-collapse, .gridSer .gridHome .headerSer nav .collapse.navbar-collapse {
+  .gridHome header nav .collapse.navbar-collapse {
     display: flex;
     flex-direction: row;
   }
-  .gridHome header nav .collapse.navbar-collapse .navbar-nav, .gridHome .gridSer .headerSer nav .collapse.navbar-collapse .navbar-nav, .gridSer .gridHome .headerSer nav .collapse.navbar-collapse .navbar-nav {
+  .gridHome header nav .collapse.navbar-collapse .navbar-nav {
     display: flex;
     flex-direction: row;
     justify-content: flex-end;
@@ -166,7 +167,7 @@ body {
     list-style: none;
     width: 100%;
   }
-  .gridHome header nav .collapse.navbar-collapse .navbar-nav .nav-link, .gridHome .gridSer .headerSer nav .collapse.navbar-collapse .navbar-nav .nav-link, .gridSer .gridHome .headerSer nav .collapse.navbar-collapse .navbar-nav .nav-link {
+  .gridHome header nav .collapse.navbar-collapse .navbar-nav .nav-link {
     padding-right: 5px;
     padding-left: 5px;
     color: black;
@@ -214,17 +215,17 @@ body {
     grid-template-areas: "headerHome" "mainHome" "footerHome";
     grid-template-rows: 5.1% 89% 8%;
   }
-  .gridHome header, .gridHome .gridSer .headerSer, .gridSer .gridHome .headerSer {
+  .gridHome header {
     border-bottom: 2.4px solid white;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
   }
-  .gridHome header nav .navbar-brand .logoHome, .gridHome .gridSer .headerSer nav .navbar-brand .logoHome, .gridSer .gridHome .headerSer nav .navbar-brand .logoHome {
+  .gridHome header nav .navbar-brand .logoHome {
     margin-top: 5px;
     max-width: 300px;
   }
-  .gridHome header nav .collapse.navbar-collapse .navbar-nav .nav-link, .gridHome .gridSer .headerSer nav .collapse.navbar-collapse .navbar-nav .nav-link, .gridSer .gridHome .headerSer nav .collapse.navbar-collapse .navbar-nav .nav-link {
+  .gridHome header nav .collapse.navbar-collapse .navbar-nav .nav-link {
     padding-right: 5px;
     padding-left: 5px;
     color: black;
@@ -271,21 +272,21 @@ body {
     grid-template-areas: "headerHome" "mainHome" "footerHome";
     grid-template-rows: 5% 88.7% 6.3%;
   }
-  .gridHome header, .gridHome .gridSer .headerSer, .gridSer .gridHome .headerSer {
+  .gridHome header {
     justify-content: space-between;
     border-bottom: 2px solid white;
   }
-  .gridHome header nav .container-fluid, .gridHome .gridSer .headerSer nav .container-fluid, .gridSer .gridHome .headerSer nav .container-fluid {
+  .gridHome header nav .container-fluid {
     margin-right: 50px;
     margin-left: 50px;
   }
-  .gridHome header nav .container-fluid .navbar-brand .logoHome, .gridHome .gridSer .headerSer nav .container-fluid .navbar-brand .logoHome, .gridSer .gridHome .headerSer nav .container-fluid .navbar-brand .logoHome {
+  .gridHome header nav .container-fluid .navbar-brand .logoHome {
     max-width: 400px;
   }
-  .gridHome header nav .container-fluid .collapse.navbar-collapse .navbar-nav .nav-link, .gridHome .gridSer .headerSer nav .container-fluid .collapse.navbar-collapse .navbar-nav .nav-link, .gridSer .gridHome .headerSer nav .container-fluid .collapse.navbar-collapse .navbar-nav .nav-link {
+  .gridHome header nav .container-fluid .collapse.navbar-collapse .navbar-nav .nav-link {
     font-size: 29px;
   }
-  .gridHome header nav .container-fluid .collapse.navbar-collapse .navbar-nav .nav-link:hover, .gridHome .gridSer .headerSer nav .container-fluid .collapse.navbar-collapse .navbar-nav .nav-link:hover, .gridSer .gridHome .headerSer nav .container-fluid .collapse.navbar-collapse .navbar-nav .nav-link:hover {
+  .gridHome header nav .container-fluid .collapse.navbar-collapse .navbar-nav .nav-link:hover {
     background-color: #ec407a;
   }
   .gridHome main .flexTitulo h1, .gridHome main .gridSer .mainSer .flexTituloSer h1, .gridSer .mainSer .gridHome main .flexTituloSer h1 {
@@ -338,7 +339,7 @@ body {
     opacity: 50%;
   }
 }
-/*MOBILES FIRST 316PX*/
+/*ESTILOS HOME MOBILE FIRST COMENCE EN 316PX*/
 .gridSer {
   display: grid;
   grid-template-areas: "headerSer" "mainSer" "footerSer";
@@ -346,6 +347,9 @@ body {
   min-height: 100vh;
 }
 .gridSer .headerSer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
   grid-area: headerSer;
   background-color: #2196f3;
   padding: 0px;
@@ -355,7 +359,6 @@ body {
   background-color: #2196f3;
   padding: 0px;
   display: flex;
-  flex-wrap: nowrap;
   flex-direction: row;
   width: 100%;
   height: 100%;
@@ -363,7 +366,6 @@ body {
 .gridSer .headerSer nav .container-fluid {
   display: flex;
   flex-direction: row;
-  flex-wrap: wrap;
   background-color: #2196f3;
   padding: 0px 3px;
   width: 100%;
@@ -485,15 +487,20 @@ body {
 }
 .gridSer .ftSer div .volver {
   margin: 0px;
-  width: 54px;
-  height: 40px;
+  width: 44px;
+  height: 30px;
+}
+.gridSer .ftSer div .iconoSer {
+  width: 44px;
+  height: 38px;
 }
 
+/*PRIMER BREAKPOINT DE 524PX*/
 @media (min-width: 524px) {
   .gridSer {
     display: grid;
     grid-template-areas: "headerSer" "mainSer" "footerSer";
-    grid-template-rows: 2.7% 94% 4.5%;
+    grid-template-rows: 2.7% 97% 4.5%;
   }
   .gridSer .headerSer {
     border-bottom: 1px solid white;
@@ -546,6 +553,9 @@ body {
     padding: 8px 15px;
   }
   .gridSer .mainSer .gridImgSer {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    justify-items: center;
     row-gap: 0px;
   }
   .gridSer .mainSer article p {
@@ -572,6 +582,7 @@ body {
     max-width: 41px;
   }
 }
+/*SEGUNDO BRACKPOINT DE 868*/
 @media (min-width: 868px) {
   .gridSer {
     display: grid;
@@ -613,7 +624,7 @@ body {
     padding-top: 4px;
     padding-bottom: 5px;
   }
-  .gridSer .mainSer .flexTituloSer .tituloSer {
+  .gridSer .mainSer .flexTituloSer h1 {
     margin-top: 20px;
     padding: 10px;
     font-size: 160px;
@@ -652,17 +663,18 @@ body {
     max-width: 45px;
   }
 }
+/*TERCER BREAKPOINT DE 1096 VISTA DESKTOP*/
 @media (min-width: 1096px) {
   .gridSer {
     display: grid;
     grid-template-areas: "headerSer" "mainSer" "footerSer";
-    grid-template-rows: 5.1% 95% 6.4%;
+    grid-template-rows: 4.5% 95% 6.4%;
   }
   .gridSer .headerSer {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    border-bottom: 3px solid white;
+    border-bottom: 2px solid white;
   }
   .gridSer .headerSer nav .container-fluid {
     margin-right: 50px;
@@ -679,7 +691,7 @@ body {
   .gridSer .headerSer nav .container-fluid .collapse.navbar-collapse .navbar-nav .nav-link:hover {
     background-color: #2196f3;
   }
-  .gridSer .mainSer .flexTituloSer .tituloSer {
+  .gridSer .mainSer .flexTituloSer h1 {
     font-size: 260px;
   }
   .gridSer .mainSer .gridImgSer {
@@ -695,9 +707,18 @@ body {
   .gridSer .mainSer .gridImgSer img:hover {
     transform: scale(1.02);
   }
+  .gridSer .mainSer .flexParrafosSer {
+    padding: 10px 50px;
+  }
   .gridSer .mainSer .flexParrafosSer p {
     padding: 10px;
     font-size: 25px;
+    border: 2px solid white;
+    border-radius: 20px;
+  }
+  .gridSer .mainSer .flexParrafosSer p:hover {
+    transform: scale(1.01);
+    background-color: white;
   }
   .gridSer .mainSer .flexConSecSer h2 {
     padding-top: 50px;
@@ -705,7 +726,10 @@ body {
     font-size: 100px;
   }
   .gridSer .mainSer .flexConSecSer p {
-    font-size: 25px;
+    font-size: 30px;
+  }
+  .gridSer .mainSer .flexConSecSer p:hover {
+    transform: scale(1.02);
   }
   .gridSer .mainSer .flexConSecSer p .botonContactoSer:hover {
     opacity: 50%;
@@ -732,7 +756,7 @@ body {
   grid-template-rows: 3.3% 95% 4.1%;
   min-height: 100vh;
 }
-.gridIns header, .gridIns .gridSer .headerSer, .gridSer .gridIns .headerSer {
+.gridIns header {
   grid-area: headerHome;
   display: flex;
   flex-direction: row;
@@ -742,7 +766,7 @@ body {
   padding-left: 2px;
   padding-right: 2px;
 }
-.gridIns header nav, .gridIns .gridSer .headerSer nav, .gridSer .gridIns .headerSer nav {
+.gridIns header nav {
   background-color: #2ECC71;
   padding: 0px;
   width: 100%;
@@ -750,37 +774,37 @@ body {
   flex-direction: row;
   justify-content: center;
 }
-.gridIns header nav .container-fluid, .gridIns .gridSer .headerSer nav .container-fluid, .gridSer .gridIns .headerSer nav .container-fluid {
+.gridIns header nav .container-fluid {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   padding-right: 0px;
   padding-left: 0px;
 }
-.gridIns header nav .container-fluid .navbar-brand, .gridIns .gridSer .headerSer nav .container-fluid .navbar-brand, .gridSer .gridIns .headerSer nav .container-fluid .navbar-brand {
+.gridIns header nav .container-fluid .navbar-brand {
   padding: 0px;
 }
-.gridIns header nav .container-fluid .navbar-brand img, .gridIns .gridSer .headerSer nav .container-fluid .navbar-brand img, .gridSer .gridIns .headerSer nav .container-fluid .navbar-brand img {
+.gridIns header nav .container-fluid .navbar-brand img {
   width: 200px;
 }
-.gridIns header nav .container-fluid button, .gridIns .gridSer .headerSer nav .container-fluid button, .gridSer .gridIns .headerSer nav .container-fluid button {
+.gridIns header nav .container-fluid button {
   width: 3em;
   height: 2.1em;
   padding: 2px;
   margin-right: 2px;
   border-radius: 5px;
 }
-.gridIns header nav .container-fluid button .navbar-toggler-icon, .gridIns .gridSer .headerSer nav .container-fluid button .navbar-toggler-icon, .gridSer .gridIns .headerSer nav .container-fluid button .navbar-toggler-icon {
+.gridIns header nav .container-fluid button .navbar-toggler-icon {
   display: inline-block;
   width: 1.6em;
   height: 1.7em;
 }
-.gridIns header nav .container-fluid .navbar-nav, .gridIns .gridSer .headerSer nav .container-fluid .navbar-nav, .gridSer .gridIns .headerSer nav .container-fluid .navbar-nav {
+.gridIns header nav .container-fluid .navbar-nav {
   margin-top: 5px;
   margin-left: 5px;
   margin-right: 5px;
 }
-.gridIns header nav .container-fluid .navbar-nav a, .gridIns .gridSer .headerSer nav .container-fluid .navbar-nav a, .gridSer .gridIns .headerSer nav .container-fluid .navbar-nav a {
+.gridIns header nav .container-fluid .navbar-nav a {
   color: black;
   background-color: white;
   font-size: 14px;
@@ -813,7 +837,7 @@ body {
   justify-items: center;
   margin-top: 20px;
 }
-.gridIns .mainIns .gridImgIns .imagenesIns {
+.gridIns .mainIns .gridImgIns img {
   width: 25em;
   height: 25em;
   padding: 10px;
@@ -866,12 +890,14 @@ body {
   margin-left: 5px;
 }
 .gridIns .ftIns .flexBotonesIns .volverIns {
-  max-height: 39px;
+  margin-top: 7px;
+  max-height: 30px;
 }
 .gridIns .ftIns .flexBotonesIns .iconosIns {
-  max-width: 47px;
+  max-width: 37px;
 }
 
+/*PRIMER BREAKPOINT DE 524PX*/
 @media (min-width: 524px) {
   .gridIns {
     display: grid;
@@ -959,6 +985,7 @@ body {
     height: 40px;
   }
 }
+/*SEGUNDO BRACKPOINT DE 868*/
 @media (min-width: 868px) {
   .gridIns {
     display: grid;
@@ -1054,11 +1081,12 @@ body {
     height: 45px;
   }
 }
+/*TERCER BREAKPOINT DE 1096 VISTA DESKTOP*/
 @media (min-width: 1096px) {
   .gridIns {
     display: grid;
     grid-template-areas: "headerHome" "mainHome" "footerHome";
-    grid-template-rows: 3.7% 95% 4.7%;
+    grid-template-rows: 4% 95% 4.7%;
   }
   .gridIns .headerIns {
     display: flex;
@@ -1091,22 +1119,30 @@ body {
   .gridIns .mainIns .gridImgIns {
     padding: 0px;
   }
-  .gridIns .mainIns .gridImgIns .imagenesIns {
+  .gridIns .mainIns .gridImgIns img {
     width: 40em;
     height: 40em;
     padding: 0px;
     margin-top: 15px;
     box-shadow: 3px 7px 0px 2px #82e0aa;
   }
-  .gridIns .mainIns .gridImgIns .imagenesIns:hover {
+  .gridIns .mainIns .gridImgIns img:hover {
     transform: scale(1.02);
   }
   .gridIns .mainIns .flexTextoIns {
     padding-top: 30px;
+    padding: 10px 50px;
   }
   .gridIns .mainIns .flexTextoIns p {
-    padding: 30px 10px;
-    font-size: 35px;
+    padding: 5px 80px;
+    margin-top: 35px;
+    font-size: 25px;
+    border: 2px solid white;
+    border-radius: 20px;
+  }
+  .gridIns .mainIns .flexTextoIns p:hover {
+    transform: scale(1.02);
+    background-color: white;
   }
   .gridIns .mainIns .articuloReglas h2 {
     font-size: 150px;
@@ -1119,9 +1155,15 @@ body {
     padding: 30px;
     margin: 0px;
   }
+  .gridIns .mainIns .articuloReglas ul {
+    padding: 0px 20px;
+  }
   .gridIns .mainIns .articuloReglas ul li {
-    font-size: 35px;
-    padding: 20px;
+    font-size: 30px;
+    padding: 20px 0px;
+  }
+  .gridIns .mainIns .articuloReglas ul li:hover {
+    transform: scale(1.02);
   }
   .gridIns .ftIns {
     border-top: 2px solid white;
@@ -1209,7 +1251,7 @@ body {
   justify-items: center;
   margin-top: 20px;
 }
-.gridGal .mainGal .gridImgGal .imgGal {
+.gridGal .mainGal .gridImgGal img {
   width: 25em;
   height: 25em;
   padding: 10px;
@@ -1247,12 +1289,13 @@ body {
   margin-left: 10px;
 }
 .gridGal .flexFtGal .flexBotonesFtGal .volverGal {
-  max-height: 39px;
+  max-height: 30px;
 }
 .gridGal .flexFtGal .flexBotonesFtGal .iconosGal {
-  max-width: 47px;
+  max-width: 38px;
 }
 
+/*PRIMER BREAKPOINT DE 524PX*/
 @media (min-width: 524px) {
   .gridGal {
     display: grid;
@@ -1331,14 +1374,8 @@ body {
   .gridGal .flexFtGal .flexBotonesFtGal {
     margin-left: 8px;
   }
-  .gridGal .flexFtGal .flexBotonesFtGal .volverGal {
-    width: 35px;
-    height: 35px;
-  }
-  .gridGal .flexFtGal .flexBotonesFtGal img {
-    max-width: 40px;
-  }
 }
+/*SEGUNDO BRACKPOINT DE 868*/
 @media (min-width: 868px) {
   .gridGal {
     display: grid;
@@ -1412,14 +1449,8 @@ body {
   .gridGal .flexFtGal .flexBotonesFtGal {
     justify-content: space-evenly;
   }
-  .gridGal .flexFtGal .flexBotonesFtGal .volverGal {
-    width: 54px;
-    height: 40px;
-  }
-  .gridGal .flexFtGal .flexBotonesFtGal img {
-    max-width: 45px;
-  }
 }
+/*TERCER BREAKPOINT DE 1096 VISTA DESKTOP*/
 @media (min-width: 1096px) {
   .gridGal {
     display: grid;
@@ -1456,14 +1487,14 @@ body {
   .gridGal .mainGal .gridImgGal {
     padding: 0px;
   }
-  .gridGal .mainGal .gridImgGal .imgGal {
+  .gridGal .mainGal .gridImgGal img {
     width: 40em;
     height: 40em;
     padding: 0px;
     margin-top: 15px;
     box-shadow: 3px 7px 0px 2px #D2B4DE;
   }
-  .gridGal .mainGal .gridImgGal .imgGal:hover {
+  .gridGal .mainGal .gridImgGal img:hover {
     transform: scale(1.02);
   }
   .gridGal .mainGal article .flexHdosGal h2 {
@@ -1661,12 +1692,12 @@ body {
 }
 .gridCon .ftCon .flexBotonesCon .volverCon {
   margin: 0px;
-  width: 54px;
-  height: 40px;
+  width: 44px;
+  height: 30px;
 }
 .gridCon .ftCon .flexBotonesCon .iconoCon {
   margin-top: 1px;
-  height: 48px;
+  height: 38px;
 }
 
 /*PRIMER BREAKPOINT 524PX*/
@@ -1747,15 +1778,6 @@ body {
     padding-bottom: 3px;
     padding-left: 4px;
   }
-  .gridCon .ftCon .flexBotonesCon .volverCon {
-    margin-top: 10px;
-    margin: 0px;
-    width: 40px;
-    height: 36px;
-  }
-  .gridCon .ftCon .flexBotonesCon .iconoCon {
-    height: 41px;
-  }
 }
 /*SEGUNDO BREAKPOINT 868PX*/
 @media (min-width: 868px) {
@@ -1835,16 +1857,8 @@ body {
     align-items: center;
     justify-content: space-evenly;
   }
-  .gridCon .ftCon .flexBotonesCon .volverCon {
-    width: 50px;
-    height: 40px;
-  }
-  .gridCon .ftCon .flexBotonesCon .iconoCon {
-    height: 45px;
-  }
 }
-/*TERCER BREAKPOINT DE 1096, 
-LO DISEÑE DESDE LA VISTA DESKTOP*/
+/*TERCER BREAKPOINT DE 1096 VISTA DESKTOP*/
 @media (min-width: 1096px) {
   .gridCon {
     display: grid;
@@ -1923,18 +1937,8 @@ LO DISEÑE DESDE LA VISTA DESKTOP*/
   .gridCon .ftCon .flexBotonesCon {
     margin-right: 0px;
   }
-  .gridCon .ftCon .flexBotonesCon .volverCon {
-    width: 55px;
-    height: 40px;
-    padding: 0px;
-    margin: 0px;
-    margin-top: 3px;
-  }
   .gridCon .ftCon .flexBotonesCon .volverCon:hover {
     opacity: 50%;
-  }
-  .gridCon .ftCon .flexBotonesCon .iconoCon {
-    height: 48px;
   }
   .gridCon .ftCon .flexBotonesCon .iconoCon:hover {
     opacity: 50%;

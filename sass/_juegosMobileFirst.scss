@@ -1,17 +1,18 @@
 @import "vars";
 
-@mixin display ($display, $direccion, $justify){
+
+@mixin display ($display, $direccion, $justify) {
 
     display: $display;
     flex-direction: $direccion;
     justify-content: $justify;
-    
+
 }
 
 
+/*ESTILOS HOME MOBILE FIRST COMENCE EN 316PX*/
 
 
-/*MOBILES FIRST 316PX*/
 .gridSer {
     display: grid;
     grid-template-areas:
@@ -23,7 +24,9 @@
 
 
     .headerSer {
-        @extend  header ;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
         grid-area: headerSer;
         background-color: $hdSer;
         padding: 0px;
@@ -34,7 +37,6 @@
             background-color: $hdSer;
             padding: 0px;
             display: flex;
-            flex-wrap: nowrap;
             flex-direction: row;
             width: 100%;
             height: 100%;
@@ -43,12 +45,10 @@
             .container-fluid {
                 display: flex;
                 flex-direction: row;
-                flex-wrap: wrap;
                 background-color: $hdSer;
                 padding: 0px 3px;
                 width: 100%;
                 height: 100%;
-
 
 
                 .navbar-brand {
@@ -92,8 +92,10 @@
         grid-area: mainSer;
         background: $mainSer;
 
+
         .flexTituloSer {
             @extend .flexTitulo;
+
 
             h1 {
                 color: $negro;
@@ -104,6 +106,7 @@
                 padding-bottom: 20px;
             }
 
+
             p {
                 color: $negro;
                 font-size: 20px;
@@ -111,11 +114,13 @@
             }
         }
 
+
         .gridImgSer {
             display: grid;
             grid-template-columns: 1fr;
             justify-items: center;
             row-gap: 2em;
+
 
             img {
                 width: 25em;
@@ -124,6 +129,7 @@
                 border-radius: 50px;
             }
         }
+
 
         .flexParrafosSer {
             margin-top: 40px;
@@ -134,15 +140,15 @@
                 font-size: 17px;
                 margin-top: 25px;
             }
-
         }
 
-        .flexConSecSer {
 
+        .flexConSecSer {
             display: flex;
             flex-direction: column;
             align-items: center;
             padding: 0px 20px;
+
 
             h2 {
                 color: $negro;
@@ -153,11 +159,13 @@
                 padding-bottom: 20px;
             }
 
+
             p {
                 font-family: 'Comfortaa', cursive;
                 font-size: 20px;
                 padding: 0px;
                 margin: 0px;
+
 
                 .botonContactoSer {
                     color: $negro;
@@ -170,54 +178,54 @@
                     margin-right: 2px;
                     text-decoration: none;
                 }
-
             }
-
-
         }
-
-
-
     }
+
 
     .ftSer {
         grid-area: footerSer;
-        background-color:$ftSer;
+        background-color: $ftSer;
         @include display(flex, column, space-evenly);
         padding-top: 9px;
         border-top: 1px solid $blanco;
+
 
         .flexSeguinos {
             display: flex;
             flex-direction: column;
             align-items: center;
 
+
             p {
                 font-size: 20px;
             }
-
         }
+
 
         div {
             @include display(flex, row, space-around);
             align-items: baseline;
 
+
             .volver {
                 margin: 0px;
-                width: 54px;
-                height: 40px;
+                width: 44px;
+                height: 30px;
+            }
+
+
+            .iconoSer {
+                width: 44px;
+                height: 38px;
             }
         }
-
-
-
-
     }
-
 }
 
-@media (min-width: 524px) {
+/*PRIMER BREAKPOINT DE 524PX*/
 
+@media (min-width: 524px) {
 
     .gridSer {
         display: grid;
@@ -225,7 +233,7 @@
             "headerSer"
             "mainSer"
             "footerSer";
-        grid-template-rows: 2.7% 94% 4.5%;
+        grid-template-rows: 2.7% 97% 4.5%;
 
 
         .headerSer {
@@ -257,11 +265,9 @@
                     }
 
 
-
                     .collapse.navbar-collapse {
                         display: flex;
                         flex-direction: row;
-
 
 
                         .navbar-nav {
@@ -283,11 +289,8 @@
                             }
                         }
                     }
-
-
                 }
             }
-
         }
 
 
@@ -296,11 +299,12 @@
 
             .flexTituloSer {
 
-                h1 {
 
+                h1 {
                     font-size: 120px;
                     margin-top: 20px;
                 }
+
 
                 p {
                     font-size: 30px;
@@ -308,12 +312,17 @@
                 }
             }
 
-            .gridImgSer {
-                row-gap: 0px;
 
+            .gridImgSer {
+                display: grid;
+                grid-template-columns: 50% 50%;
+                justify-items: center;
+                row-gap: 0px;
             }
 
+
             article {
+
 
                 p {
                     padding-bottom: 50px;
@@ -324,15 +333,17 @@
 
         .ftSer {
 
-            .flexSeguinos {
 
+            .flexSeguinos {
                 padding-left: 0px;
+
 
                 p {
                     font-size: 17.3px;
                     padding-right: 2px;
                 }
             }
+
 
             div {
                 @include display(flex, row, space-around);
@@ -342,25 +353,25 @@
 
                 .iconoSer {
 
-                    .volver {
 
+                    .volver {
                         max-width: 35px;
                     }
+
 
                     img {
                         max-width: 41px;
 
                     }
-
                 }
             }
         }
     }
 }
 
+/*SEGUNDO BRACKPOINT DE 868*/
+
 @media (min-width: 868px) {
-
-
 
     .gridSer {
         display: grid;
@@ -370,16 +381,21 @@
             "footerSer";
         grid-template-rows: 4.4% 94% 6.9%;
 
+
         .headerSer {
             border-bottom: 2px solid $blanco;
             @include display(flex, row, space-around);
 
+
             nav {
+
 
                 .container-fluid {
                     @include display(flex, row, center);
 
+
                     .navbar-brand {
+
 
                         .logoSer {
                             margin-top: 5px;
@@ -388,6 +404,7 @@
                         }
                     }
 
+
                     .collapse.navbar-collapse {
                         width: 100%;
                         height: 100%;
@@ -395,6 +412,7 @@
 
                         .navbar-nav {
                             width: 100%;
+
 
                             .nav-link {
                                 padding-right: 5px;
@@ -417,19 +435,23 @@
 
         .mainSer {
 
+
             .flexTituloSer {
 
-                .tituloSer {
+
+                h1 {
                     margin-top: 20px;
                     padding: 10px;
                     font-size: 160px;
                 }
+
 
                 p {
                     font-size: 40px;
                     margin-bottom: 30px;
                 }
             }
+
 
             .gridImgSer {
                 padding: 20px;
@@ -445,28 +467,33 @@
                 }
             }
 
+
             .flexParrafosSer {
+
 
                 p {
                     font-size: 20px;
                 }
-
             }
 
+
             .flexConSecSer {
+
 
                 h2 {
                     font-size: 60px;
                     padding: 50px 0px
                 }
             }
-
         }
 
 
         .ftSer {
 
+
             .flexSeguinos {
+
+
                 p {
                     font-size: 19px;
                 }
@@ -479,20 +506,20 @@
 
 
                 .iconoSer {
+
+
                     img {
                         max-width: 45px;
                     }
                 }
-
             }
-
-
         }
     }
 }
 
-@media (min-width: 1096px) {
+/*TERCER BREAKPOINT DE 1096 VISTA DESKTOP*/
 
+@media (min-width: 1096px) {
 
     .gridSer {
         display: grid;
@@ -500,20 +527,24 @@
             "headerSer"
             "mainSer"
             "footerSer";
-        grid-template-rows: 5.1% 95% 6.4%;
+        grid-template-rows: 4.5% 95% 6.4%;
 
 
         .headerSer {
             @include display(flex, row, space-between);
-            border-bottom: 3px solid $blanco;
+            border-bottom: 2px solid $blanco;
+
 
             nav {
+
 
                 .container-fluid {
                     margin-right: 50px;
                     margin-left: 50px;
 
+
                     .navbar-brand {
+
 
                         .logoSer {
                             width: 322px;
@@ -521,24 +552,25 @@
                         }
                     }
 
+
                     .collapse.navbar-collapse {
 
+
                         .navbar-nav {
+
 
                             .nav-link {
                                 font-size: 29.5px;
                                 padding: 4px;
 
                                 &:hover {
-                                    background-color:$hdSer
+                                    background-color: $hdSer
                                 }
                             }
                         }
                     }
                 }
             }
-
-
         }
 
 
@@ -546,15 +578,17 @@
 
 
             .flexTituloSer {
-                .tituloSer {
+
+
+                h1 {
                     font-size: 260px;
                 }
-
             }
 
-            .gridImgSer {
 
+            .gridImgSer {
                 padding: 0px;
+
 
                 img {
                     width: 40em;
@@ -563,24 +597,33 @@
                     margin-top: 15px;
                     box-shadow: 3px 7px 0px 2px $ftSer;
 
-
                     &:hover {
                         transform: scale(1.02);
                     }
-
                 }
-
-
             }
 
+
             .flexParrafosSer {
+                padding: 10px 50px;
+
+
                 p {
                     padding: 10px;
                     font-size: 25px;
+                    border: 2px solid white;
+                    border-radius: 20px;
+
+                    &:hover {
+                        transform: scale(1.01);
+                        background-color: white;
+                    }
                 }
             }
 
+
             .flexConSecSer {
+
 
                 h2 {
                     padding-top: 50px;
@@ -588,8 +631,14 @@
                     font-size: 100px;
                 }
 
+
                 p {
-                    font-size: 25px;
+                    font-size: 30px;
+
+                    &:hover {
+                        transform: scale(1.02);
+                    }
+
 
                     .botonContactoSer {
 
@@ -597,44 +646,35 @@
                             opacity: 50%;
                         }
                     }
-
                 }
-
-
-
             }
-
-
         }
 
-        .ftSer {
 
+        .ftSer {
             border-top: 2px solid $blanco;
 
+
             .flexSeguinos {
+
+
                 p {
                     font-size: 30px;
                 }
             }
 
+
             .botonesFtSer {
 
 
-
                 img {
-
                     width: 49px;
 
                     &:hover {
                         opacity: 50%;
                     }
                 }
-
-
             }
-
-
-
         }
     }
 }

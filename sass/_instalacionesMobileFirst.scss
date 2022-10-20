@@ -1,18 +1,16 @@
 @import "vars";
 
-@mixin display ($display, $direccion, $justify){
+
+@mixin display ($display, $direccion, $justify) {
 
     display: $display;
     flex-direction: $direccion;
     justify-content: $justify;
-    
+
 }
 
 
 /*ESTILOS INSTALACIONES MOBILE FIRST COMENCE EN 316PX*/
-
-
-
 
 
 .gridIns {
@@ -26,7 +24,7 @@
     grid-template-rows: 3.3% 95% 4.1%;
     min-height: 100vh;
 
-    
+
     header {
         grid-area: headerHome;
         @include display(flex, row, space-between);
@@ -127,7 +125,7 @@
             justify-items: center;
             margin-top: 20px;
 
-            .imagenesIns {
+            img {
                 width: 25em;
                 height: 25em;
                 padding: 10px;
@@ -200,11 +198,12 @@
             margin-left: 5px;
 
             .volverIns {
-                max-height: 39px;
+                margin-top: 7px;
+                max-height: 30px;
             }
 
             .iconosIns {
-                max-width: 47px;
+                max-width: 37px;
             }
 
         }
@@ -212,10 +211,9 @@
     }
 }
 
-
+/*PRIMER BREAKPOINT DE 524PX*/
 
 @media (min-width: 524px) {
-
 
     .gridIns {
         display: grid;
@@ -259,11 +257,9 @@
                     }
 
 
-
                     .collapse.navbar-collapse {
                         display: flex;
                         flex-direction: row;
-
 
 
                         .navbar-nav {
@@ -285,17 +281,17 @@
                             }
                         }
                     }
-
-
                 }
             }
-
         }
+
 
         .mainIns {
             grid-area: mainHome;
 
+
             .flexTitutloIns {
+
 
                 h1 {
                     padding: 30px;
@@ -303,6 +299,7 @@
                 }
 
             }
+
 
             .gridImgIns {
                 display: grid;
@@ -314,12 +311,10 @@
 
             .articuloReglas {
 
+
                 h2 {
                     font-size: 70px;
                 }
-
-
-
             }
         }
 
@@ -329,49 +324,32 @@
             grid-area: footerHome;
             border-top: 1px solid $blanco;
 
+
             p {
                 font-size: 17px;
             }
 
 
-
             .flexBotonesIns {
-
                 margin-left: 8px;
+
 
                 .volverIns {
                     width: 35px;
                     height: 35px;
                 }
 
+
                 img {
                     width: 40px;
                     height: 40px;
                 }
-
-
             }
-
-
-
-
         }
-
-
-
-
-
     }
-
-
-
-
-
-
-
-
-
 }
+
+/*SEGUNDO BRACKPOINT DE 868*/
 
 @media (min-width: 868px) {
 
@@ -379,16 +357,21 @@
         display: grid;
         grid-template-rows: 4.4% 94% 6.8%;
 
+
         .headerIns {
             border-bottom: 2px solid $blanco;
             @include display(flex, row, space-around);
 
+
             nav {
+
 
                 .container-fluid {
                     @include display(flex, row, space-between);
 
+
                     .navbar-brand {
+
 
                         .logoIns {
                             margin-top: 5px;
@@ -397,6 +380,7 @@
                         }
                     }
 
+
                     .collapse.navbar-collapse {
                         width: 100%;
                         height: 100%;
@@ -404,6 +388,7 @@
 
                         .navbar-nav {
                             width: 100%;
+
 
                             .nav-linkIns {
                                 padding-right: 5px;
@@ -423,9 +408,12 @@
             }
         }
 
+
         .mainIns {
 
+
             .flexTitutloIns {
+
 
                 h1 {
                     padding-top: 15px;
@@ -433,10 +421,12 @@
                     font-size: 150px;
                 }
 
+
                 p {
                     font-size: 25px;
                 }
             }
+
 
             .gridImgIns {
                 padding: 20px;
@@ -452,7 +442,9 @@
                 }
             }
 
+
             .flexTextoIns {
+
 
                 p {
                     padding: 20px;
@@ -460,6 +452,7 @@
                 }
 
             }
+
 
             .articuloReglas {
 
@@ -470,28 +463,21 @@
                     font-size: 90px;
                 }
 
+
                 ul {
+
 
                     li {
                         font-size: 20px;
                     }
-
-
-
                 }
-
-
             }
-
-
-
-
-
         }
 
 
         .ftIns {
             grid-area: footerHome;
+
 
             p {
                 font-size: 19px;
@@ -499,36 +485,32 @@
 
 
             .flexBotonesIns {
-
                 justify-content: space-evenly;
                 margin-left: 4px;
+
 
                 .volverIns {
                     width: 40px;
                     height: 45px;
                 }
 
+
                 a {
                     width: 45px;
                     height: 45px;
+
 
                     .iconosIns {
                         width: 45px;
                         height: 45px;
                     }
                 }
-
-
             }
-
         }
-
-
-
-
-
     }
 }
+
+/*TERCER BREAKPOINT DE 1096 VISTA DESKTOP*/
 
 @media (min-width: 1096px) {
 
@@ -538,20 +520,24 @@
             "headerHome"
             "mainHome"
             "footerHome";
-        grid-template-rows: 3.7% 95% 4.7%;
+        grid-template-rows: 4% 95% 4.7%;
 
 
         .headerIns {
             @include display(flex, row, space-between);
             border-bottom: 2px solid $blanco;
 
+
             nav {
+
 
                 .container-fluid {
                     margin-right: 50px;
                     margin-left: 50px;
 
+
                     .navbar-brand {
+
 
                         .logoIns {
                             width: 322px;
@@ -559,9 +545,12 @@
                         }
                     }
 
+
                     .collapse.navbar-collapse {
 
+
                         .navbar-nav {
+
 
                             .nav-linkIns {
                                 font-size: 29.5px;
@@ -570,20 +559,19 @@
                                 &:hover {
                                     background-color: $hdIns
                                 }
-
                             }
                         }
                     }
                 }
             }
-
-
         }
+
 
         .mainIns {
 
 
             .flexTitutloIns {
+
 
                 h1 {
                     padding-top: 50px;
@@ -598,17 +586,15 @@
 
 
             .gridImgIns {
+                 padding: 0px;
 
-                padding: 0px;
 
-                .imagenesIns {
-
+                img {
                     width: 40em;
                     height: 40em;
                     padding: 0px;
                     margin-top: 15px;
                     box-shadow: 3px 7px 0px 2px $ftIns;
-
 
                     &:hover {
                         transform: scale(1.02);
@@ -619,21 +605,34 @@
 
             }
 
+
             .flexTextoIns {
                 padding-top: 30px;
+                padding: 10px 50px;
+
 
                 p {
-                    padding: 30px 10px;
-                    font-size: 35px
+                    padding: 5px 80px;
+                    margin-top: 35px;
+                    font-size: 25px;
+                    border: 2px solid white;
+                    border-radius: 20px;
+
+                    &:hover {
+                        transform: scale(1.02);
+                        background-color: white;
+                    }
                 }
             }
 
 
             .articuloReglas {
 
+
                 h2 {
                     font-size: 150px;
                 }
+
 
                 p {
                     @include display(flex, column, center);
@@ -642,35 +641,36 @@
                     margin: 0px;
                 }
 
+
                 ul {
 
+                    padding: 0px 20px;
+
                     li {
+                        font-size: 30px;
+                        padding: 20px 0px;
 
-                        font-size: 35px;
-                        padding: 20px;
+                        &:hover {
+                            transform: scale(1.02);
+                        }
                     }
-
-
-
                 }
-
-
-
             }
-
         }
-
 
 
         .ftIns {
             border-top: 2px solid $blanco;
+
 
             p {
 
                 font-size: 30px;
             }
 
+
             .flexBotonesIns {
+
 
                 img {
 
@@ -678,21 +678,7 @@
                         opacity: 50%;
                     }
                 }
-
-
-
             }
         }
-
-
     }
-
-
-
-
-
-
-
-
-
 }
