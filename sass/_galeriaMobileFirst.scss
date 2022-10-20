@@ -1,11 +1,11 @@
 @import "vars";
 
-@mixin display ($display, $direccion, $justify){
+@mixin display ($display, $direccion, $justify) {
 
     display: $display;
     flex-direction: $direccion;
     justify-content: $justify;
-    
+
 }
 
 
@@ -165,12 +165,12 @@
 
 
             .volverGal {
-                max-height: 30px;
+                height: 30px;
             }
 
 
             .iconosGal {
-                max-width: 38px;
+                width: 38px;
             }
         }
     }
@@ -434,6 +434,19 @@
 
             .flexBotonesFtGal {
                 justify-content: space-evenly;
+
+
+                .volverGal {
+                    margin: 0px;
+                    width: 54px;
+                    height: 40px;
+                }
+
+
+                .iconosGal {
+                    width: 54px;
+                    height: 48px;
+                }
             }
         }
     }
@@ -461,7 +474,7 @@
 
 
                 .container-fluid {
-                    margin-right: 50px;
+                    margin-right: 45px;
                     margin-left: 50px;
 
 
@@ -572,6 +585,6 @@
                     }
                 }
             }
-        }   
+        }
     }
 }

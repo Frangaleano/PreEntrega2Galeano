@@ -505,12 +505,16 @@
                 padding-left: 4px;
 
 
+                .volver {
+                    margin: 0px;
+                    width: 54px;
+                    height: 40px;
+                }
+
+
                 .iconoSer {
-
-
-                    img {
-                        max-width: 45px;
-                    }
+                    width: 54px;
+                    height: 48px;
                 }
             }
         }
@@ -527,7 +531,7 @@
             "headerSer"
             "mainSer"
             "footerSer";
-        grid-template-rows: 4.5% 95% 6.4%;
+        grid-template-rows: 4.5% 95% 5.7%;
 
 
         .headerSer {
@@ -641,7 +645,7 @@
 
 
                     .botonContactoSer {
-
+                        font-size: 25px;
                         &:hover {
                             opacity: 50%;
                         }
@@ -668,7 +672,6 @@
 
 
                 img {
-                    width: 49px;
 
                     &:hover {
                         opacity: 50%;

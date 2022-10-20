@@ -199,11 +199,11 @@
 
             .volverIns {
                 margin-top: 7px;
-                max-height: 30px;
+                height: 30px;
             }
 
             .iconosIns {
-                max-width: 37px;
+                width: 37px;
             }
 
         }
@@ -489,21 +489,16 @@
                 margin-left: 4px;
 
 
-                .volverIns {
-                    width: 40px;
-                    height: 45px;
-                }
-
-
-                a {
-                    width: 45px;
-                    height: 45px;
-
-
-                    .iconosIns {
-                        width: 45px;
-                        height: 45px;
+                    .volverIns {
+                        margin: 0px;
+                        width: 54px;
+                        height: 40px;
                     }
+
+
+                .iconosIns {
+                    width: 54px;
+                    height: 48px;
                 }
             }
         }
@@ -520,7 +515,7 @@
             "headerHome"
             "mainHome"
             "footerHome";
-        grid-template-rows: 4% 95% 4.7%;
+        grid-template-rows: 4% 95% 5.1%;
 
 
         .headerIns {
@@ -586,7 +581,7 @@
 
 
             .gridImgIns {
-                 padding: 0px;
+                padding: 0px;
 
 
                 img {

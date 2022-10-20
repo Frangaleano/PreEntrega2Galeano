@@ -1,11 +1,11 @@
 @import "vars";
 
-@mixin display ($display, $direccion, $justify){
+@mixin display ($display, $direccion, $justify) {
 
     display: $display;
     flex-direction: $direccion;
     justify-content: $justify;
-    
+
 }
 
 
@@ -23,7 +23,7 @@
     font-family: $negro 'Comfortaa', cursive;
     gap: 1px;
 
-    
+
     .flexHdCon {
         @include display(flex, row, space-between);
         background-color: $hdCon;
@@ -483,6 +483,18 @@
                 padding-left: 0px;
                 align-items: center;
                 justify-content: space-evenly;
+
+                .volverCon {
+                    margin: 0px;
+                    width: 54px;
+                    height: 40px;
+                }
+
+
+                .iconoCon {
+                    width: 54px;
+                    height: 48px;
+                }
             }
         }
     }
@@ -498,7 +510,7 @@
             "headerHome"
             "mainHome"
             "footerHome";
-        grid-template-rows: 5.2% 90% 6.5%;
+        grid-template-rows: 5.2% 90% 6.6%;
         grid-template-columns: 100%;
 
 
@@ -512,7 +524,7 @@
 
 
                 .container-fluidCon {
-                    margin-right: 50px;
+                    margin-right: 35px;
                     margin-left: 50px;
 
 
@@ -598,7 +610,7 @@
             }
 
 
-            .princesCon{
+            .princesCon {
 
 
                 .princesosCon {
@@ -617,7 +629,7 @@
             padding-bottom: 0px;
 
 
-            p { 
+            p {
                 font-size: 30px;
             }
 

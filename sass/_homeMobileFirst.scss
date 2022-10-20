@@ -393,6 +393,19 @@
 
         .flexBotonesHm {
             justify-content: space-evenly;
+
+
+            .volver {
+                margin: 0px;
+                width: 54px;
+                height: 40px;
+            }
+
+
+            .iconoHome {
+                width: 54px;
+                height: 48px;
+            }
         }
     }
 }
@@ -506,9 +519,14 @@
                 font-size: 30px;
             }
 
+            .volver {
+                &:hover {
+                    opacity: 50%;
+                }
+            }
+
 
             .iconoHome {
-                width: 48px;
 
                 &:hover {
                     opacity: 50%;

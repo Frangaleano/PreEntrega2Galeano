@@ -264,6 +264,15 @@ body {
   .gridHome .flexBotonesHm {
     justify-content: space-evenly;
   }
+  .gridHome .flexBotonesHm .volver {
+    margin: 0px;
+    width: 54px;
+    height: 40px;
+  }
+  .gridHome .flexBotonesHm .iconoHome {
+    width: 54px;
+    height: 48px;
+  }
 }
 /*TERCER BREAKPOINT DE 1096 VISTA DESKTOP*/
 @media (min-width: 1096px) {
@@ -332,8 +341,8 @@ body {
     font-family: "Comfortaa", cursive;
     font-size: 30px;
   }
-  .gridHome footer .iconoHome {
-    width: 48px;
+  .gridHome footer .volver:hover {
+    opacity: 50%;
   }
   .gridHome footer .iconoHome:hover {
     opacity: 50%;
@@ -659,8 +668,14 @@ body {
     justify-content: space-evenly;
     padding-left: 4px;
   }
-  .gridSer .ftSer .botonesFtSer .iconoSer img {
-    max-width: 45px;
+  .gridSer .ftSer .botonesFtSer .volver {
+    margin: 0px;
+    width: 54px;
+    height: 40px;
+  }
+  .gridSer .ftSer .botonesFtSer .iconoSer {
+    width: 54px;
+    height: 48px;
   }
 }
 /*TERCER BREAKPOINT DE 1096 VISTA DESKTOP*/
@@ -668,7 +683,7 @@ body {
   .gridSer {
     display: grid;
     grid-template-areas: "headerSer" "mainSer" "footerSer";
-    grid-template-rows: 4.5% 95% 6.4%;
+    grid-template-rows: 4.5% 95% 5.7%;
   }
   .gridSer .headerSer {
     display: flex;
@@ -731,6 +746,9 @@ body {
   .gridSer .mainSer .flexConSecSer p:hover {
     transform: scale(1.02);
   }
+  .gridSer .mainSer .flexConSecSer p .botonContactoSer {
+    font-size: 25px;
+  }
   .gridSer .mainSer .flexConSecSer p .botonContactoSer:hover {
     opacity: 50%;
   }
@@ -739,9 +757,6 @@ body {
   }
   .gridSer .ftSer .flexSeguinos p {
     font-size: 30px;
-  }
-  .gridSer .ftSer .botonesFtSer img {
-    width: 49px;
   }
   .gridSer .ftSer .botonesFtSer img:hover {
     opacity: 50%;
@@ -891,10 +906,10 @@ body {
 }
 .gridIns .ftIns .flexBotonesIns .volverIns {
   margin-top: 7px;
-  max-height: 30px;
+  height: 30px;
 }
 .gridIns .ftIns .flexBotonesIns .iconosIns {
-  max-width: 37px;
+  width: 37px;
 }
 
 /*PRIMER BREAKPOINT DE 524PX*/
@@ -1069,16 +1084,13 @@ body {
     margin-left: 4px;
   }
   .gridIns .ftIns .flexBotonesIns .volverIns {
-    width: 40px;
-    height: 45px;
+    margin: 0px;
+    width: 54px;
+    height: 40px;
   }
-  .gridIns .ftIns .flexBotonesIns a {
-    width: 45px;
-    height: 45px;
-  }
-  .gridIns .ftIns .flexBotonesIns a .iconosIns {
-    width: 45px;
-    height: 45px;
+  .gridIns .ftIns .flexBotonesIns .iconosIns {
+    width: 54px;
+    height: 48px;
   }
 }
 /*TERCER BREAKPOINT DE 1096 VISTA DESKTOP*/
@@ -1086,7 +1098,7 @@ body {
   .gridIns {
     display: grid;
     grid-template-areas: "headerHome" "mainHome" "footerHome";
-    grid-template-rows: 4% 95% 4.7%;
+    grid-template-rows: 4% 95% 5.1%;
   }
   .gridIns .headerIns {
     display: flex;
@@ -1289,10 +1301,10 @@ body {
   margin-left: 10px;
 }
 .gridGal .flexFtGal .flexBotonesFtGal .volverGal {
-  max-height: 30px;
+  height: 30px;
 }
 .gridGal .flexFtGal .flexBotonesFtGal .iconosGal {
-  max-width: 38px;
+  width: 38px;
 }
 
 /*PRIMER BREAKPOINT DE 524PX*/
@@ -1449,6 +1461,15 @@ body {
   .gridGal .flexFtGal .flexBotonesFtGal {
     justify-content: space-evenly;
   }
+  .gridGal .flexFtGal .flexBotonesFtGal .volverGal {
+    margin: 0px;
+    width: 54px;
+    height: 40px;
+  }
+  .gridGal .flexFtGal .flexBotonesFtGal .iconosGal {
+    width: 54px;
+    height: 48px;
+  }
 }
 /*TERCER BREAKPOINT DE 1096 VISTA DESKTOP*/
 @media (min-width: 1096px) {
@@ -1464,7 +1485,7 @@ body {
     border-bottom: 2px solid white;
   }
   .gridGal .headerGal nav .container-fluid {
-    margin-right: 50px;
+    margin-right: 45px;
     margin-left: 50px;
   }
   .gridGal .headerGal nav .container-fluid .navbar-brand .logoGal {
@@ -1857,13 +1878,22 @@ body {
     align-items: center;
     justify-content: space-evenly;
   }
+  .gridCon .ftCon .flexBotonesCon .volverCon {
+    margin: 0px;
+    width: 54px;
+    height: 40px;
+  }
+  .gridCon .ftCon .flexBotonesCon .iconoCon {
+    width: 54px;
+    height: 48px;
+  }
 }
 /*TERCER BREAKPOINT DE 1096 VISTA DESKTOP*/
 @media (min-width: 1096px) {
   .gridCon {
     display: grid;
     grid-template-areas: "headerHome" "mainHome" "footerHome";
-    grid-template-rows: 5.2% 90% 6.5%;
+    grid-template-rows: 5.2% 90% 6.6%;
     grid-template-columns: 100%;
   }
   .gridCon .flexHdCon {
@@ -1876,7 +1906,7 @@ body {
     padding-left: 4px;
   }
   .gridCon .flexHdCon .navbarCon .container-fluidCon {
-    margin-right: 50px;
+    margin-right: 35px;
     margin-left: 50px;
   }
   .gridCon .flexHdCon .navbarCon .container-fluidCon .navbar-brandCon .imgHdCon {
