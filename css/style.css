@@ -43,6 +43,7 @@ body {
 }
 .gridHome header nav .container-fluid .logoHome {
   max-width: 200px;
+  height: 39px;
 }
 .gridHome header nav .container-fluid div .nav-link {
   color: black;
