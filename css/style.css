@@ -309,8 +309,6 @@ body {
     row-gap: 10px;
   }
   .gridHome main .imgHome img {
-    width: 40em;
-    height: 40em;
     padding: 0px;
     margin-top: 10px;
     box-shadow: 3px 7px 0px 2px #ff9999;

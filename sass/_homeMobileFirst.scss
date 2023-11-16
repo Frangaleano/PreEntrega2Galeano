@@ -372,8 +372,8 @@
 
 
                 img {
-                    width: 30em;
-                    height: 30em;
+                    width: 10em;
+                    height: 10em;
                 }
             }
 
@@ -473,18 +473,11 @@
 
             .imgHome {
                 row-gap: 10px;
-
-
+                
                 img {
-                    width: 40em;
-                    height: 40em;
                     padding: 0px;
                     margin-top: 10px;
                     box-shadow: 3px 7px 0px 2px $ftHome;
-
-                    &:hover {
-                        transform: scale(1.02);
-                    }
                 }
             }
 
